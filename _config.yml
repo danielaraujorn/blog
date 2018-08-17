@@ -1,5 +1,3 @@
-gems: [jekyll-paginate]
-
 # Site settings 配置站点
 title: "Blog de IoT"
 description: ""
@@ -87,4 +85,4 @@ RSS: false
 permalink: /:year/:month/:day/:title.html
 
 # Plugins
-plugins_dir: [jekyll-paginate]
+plugins: [jekyll-paginate]

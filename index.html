@@ -2,12 +2,12 @@
 layout: default
 home-title: H2O Theme For Jekyll
 description: Descrição bem aqui
-bannerUrl: '/assets/img/profile.png'
+bannerUrl: '/assets/img/background.svg'
 ---
 
 {% include header.html %}
 
-<div style="background-image: url('{{ page.bannerUrl }}');background-size:cover;background-position:center" class="g-banner home-banner {{ site.theme-color | prepend: 'banner-theme-' }}" data-theme="{{ site.theme-color }}">
+<div style="background-color:#006064;background-image: url('{{ page.bannerUrl }}');background-size:cover;background-position:center" class="g-banner home-banner {{ site.theme-color | prepend: 'banner-theme-' }}" data-theme="{{ site.theme-color }}">
     <h2>{{ page.home-title }}</h2>
     <h3>{{ page.description }}</h3>
     {% if page.header-img %}
