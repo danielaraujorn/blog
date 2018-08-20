@@ -17,8 +17,8 @@ footer:
   since: 2018
 
 # Author
-author: ""
-nickname: ""
+author: "Daniel Araújo"
+nickname: "danielaraujorn"
 bio: ""
 avatar: "/assets/img/profile.png"
 
@@ -38,7 +38,7 @@ mathjax: true
 
 # Share
 social-share: true
-social-share-items: ["facebook", "instagram", "twitter"]
+social-share-items: ['twitter','facebook','instagram']
 
 # theme color 主题皮肤
 theme-color: "default" # pink or default
@@ -49,10 +49,12 @@ postPatterns: "circuitBoard"
 # SNS settings 配置社交网站
 # url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
-  weibo: "//weibo.com/lovecolcol"
-  juejin: "//juejin.im/user/57a6f434165abd006159b4cc"
-  instagram: "//www.instagram.com/steveliaocn"
-  github: "//github.com/kaeyleo"
+  instagram: "//instagram.com/danieltazz"
+  facebook: "//facebook.com/danielaraujorn"
+  linkedin: "//linkedin.com/in/danielaraujorn/"
+#   juejin: "//juejin.im/user/57a6f434165abd006159b4cc"
+#   instagram: "//www.instagram.com/steveliaocn"
+#   github: "//github.com/kaeyleo"
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
@@ -78,7 +80,7 @@ kramdown:
   input: GFM
 
 # RSS
-RSS: false
+RSS: true
 
 # Permalink
 # See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35

@@ -9,7 +9,7 @@
 	}
 	.st0{fill:none;}
 	.st1{
-		fill:#00565B;animation: fadeIn 1s;
+		fill:#138bec;animation: fadeIn 3s;
 		animation-fill-mode: forwards;
 	}
 	.st2{fill:url(#iot);}
