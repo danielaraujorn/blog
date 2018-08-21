@@ -4,8 +4,8 @@
 
 <body>
   <!--[if lt IE 10]>
-<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
-<![endif]-->
+  <div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+  <![endif]-->
   <input id="nm-switch" type="hidden" value="{{ site.nightMode }}"> {% include header.html %}
 
   <header class="g-banner post-header {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }} {% unless page.cover %}post-no-cover{% endunless %}"
@@ -13,7 +13,7 @@
     <div class="post-wrapper">
       <div class="post-tags">
         {% if page.tags.size > 0 %} {% for tag in page.tags %}
-        <a href="{{ " tags# " | append: tag | absolute_url }}" class="post-tag">{{ tag }}</a>
+        <a href="{{site.baseurl}}/{{"tags#" | append: tag | absolute_url }}" class="post-tag">{{ tag }}</a>
         {% endfor %} {% endif %}
       </div>
       <h1>{{ page.title }}</h1>
@@ -71,7 +71,7 @@
   <section class="post-footer-item read-next">
     {% if page.next.url %}
     <div class="read-next-item">
-      <a href="{{ page.next.url }}" class="read-next-link"></a>
+      <a href="{{site.baseurl}}{{ page.next.url }}" class="read-next-link"></a>
       <section>
         <span>{{ page.next.title }}</span>
         <p>{{ page.next.excerpt | strip_html | strip_newlines | truncate: 60}}</p>
@@ -82,7 +82,7 @@
     </div>
     {% endif %} {% if page.previous.url %}
     <div class="read-next-item">
-      <a href="{{ page.previous.url }}" class="read-next-link"></a>
+      <a href="{{site.baseurl}}{{ page.previous.url }}" class="read-next-link"></a>
       <section>
         <span>{{ page.previous.title }}</span>
         <p>{{ page.previous.excerpt | strip_html | strip_newlines | truncate: 60}}</p>
@@ -134,7 +134,7 @@
     })();
   </script> {% endif %}
 
-  <script src="{{site.baseurl}}/assets/js/prism.js"></script>
+<script src="{{site.baseurl}}/assets/js/prism.js"></script>
   <script src="{{site.baseurl}}/assets/js/index.min.js"></script>
 </body>
 
