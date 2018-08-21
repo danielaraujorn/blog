@@ -17,10 +17,10 @@ footer:
   since: 2018
 
 # Author
-author: "Daniel Araújo"
-nickname: "danielaraujorn"
-bio: ""
-avatar: "/assets/img/profile.png"
+# author: "Daniel Araújo"
+# nickname: "danielaraujorn"
+# bio: ""
+# avatar: "/assets/img/profile.png"
 
 # Search
 search: true
@@ -48,10 +48,10 @@ postPatterns: "circuitBoard"
 
 # SNS settings 配置社交网站
 # url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
-sns:
-  instagram: "//instagram.com/danieltazz"
-  facebook: "//facebook.com/danielaraujorn"
-  linkedin: "//linkedin.com/in/danielaraujorn/"
+# sns:
+#   instagram: "//instagram.com/danieltazz"
+#   facebook: "//facebook.com/danielaraujorn"
+#   linkedin: "//linkedin.com/in/danielaraujorn/"
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
