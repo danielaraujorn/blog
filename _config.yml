@@ -38,7 +38,7 @@ mathjax: true
 
 # Share
 social-share: true
-social-share-items: ['twitter','facebook','instagram']
+social-share-items: ["twitter", "facebook", "instagram"]
 
 # theme color 主题皮肤
 theme-color: "default" # pink or default
@@ -84,4 +84,7 @@ RSS: true
 permalink: /:year/:month/:day/:title.html
 
 # Plugins
-plugins: [jekyll-paginate]
+plugins_dir: [jekyll-paginate]
+
+# gems
+gems: [jekyll-paginate]
