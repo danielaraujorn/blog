@@ -15,7 +15,7 @@ A unidade central (ou _middleware_) é o principal componente desta arquitetura,
 
 A aplicação segue os princípios do padrão _Representational State Transfer (RESTful)_ que utiliza os métodos do HTTP para acesso externo à central que recebe os dados gerados dos seguintes componentes: consumo de água a partir de hidrômetros; consumo energético a partir de tomadas; registro de acionamento do sistema de iluminação e das tomadas. O _middleware_ é constituído de várias ferramentas e bibliotecas que funcionam integradas entre si, como é mostrado na Figura a seguir.
 
-![Unidade central](/assets/central.png)
+![Unidade central]({{site.baseurl}}/assets/central.png)
 
 ### Integração
 
