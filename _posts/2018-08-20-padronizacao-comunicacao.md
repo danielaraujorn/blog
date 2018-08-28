@@ -5,6 +5,7 @@ date: 2018-08-20
 author: Daniel Araújo
 cover: "https://startupi.com.br/wp-content/uploads/2018/03/iot-770x250.jpg"
 tags: padronização protocolo comunicação
+comments: true
 ---
 
 Este post mostrará uma proposta de padronização semântica genérica para dispositivos de Internet das coisas, isso permite uma comunicação e intercâmbio de serviços entre dispositivos sem compatibilidade prévia entre os equipamentos. O padrão proposto visa permitir a descrição de qualquer maquinário em atributos para facilitar o desenvolvimento sem que seja necessário alteração em nenhuma das camadas escolhidas previamente pelos desenvolvedores, beneficiando o ambiente de produção de novas ferramentas inteligentes por empresas ou grupos de pesquisa, bem como permitindo a integração de diversos dispositivos sejam eles compostos por um conjunto de sensores, de atuadores ou de ambos os fins e independente de quais protocolos de comunicação utilizem.
