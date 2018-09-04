@@ -13,7 +13,7 @@
     <div class="post-wrapper">
       <div class="post-tags">
         {% if page.tags.size > 0 %} {% for tag in page.tags %}
-        <a href="{{site.baseurl}}/{{"tags#" | append: tag  }}" class="post-tag">{{ tag }}</a>
+        <a href="{{site.baseurl}}/{{ "tags.html#" | append: tag }}" class="post-tag">{{ tag }}</a>
         {% endfor %} {% endif %}
       </div>
       <h1>{{ page.title }}</h1>
