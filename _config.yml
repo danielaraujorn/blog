@@ -1,8 +1,8 @@
 # Site settings 配置站点
 title: "Blog de IoT"
-description: ""
-keyword: ""
-url: "" # your host
+description: "Internet das coisas ao seu alcance"
+keyword: "iot, automation"
+url: "https://saiot.ect.ufrn.br/blog" # your host
 
 # if you don't need baseurl, you should leave this value blank.
 baseurl: "/blog"
@@ -11,6 +11,7 @@ baseurl: "/blog"
 nav:
   home: "/"
   tags: "/tags.html"
+  sobre: "/about.html"
 
 # Footer
 footer:

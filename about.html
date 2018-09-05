@@ -1,0 +1,27 @@
+---
+title: Sobre
+layout: default
+---
+
+{% include header.html %}
+
+<div class="g-banner tags-banner {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }}" data-theme="{{ site.theme-color }}">
+  <h2>SOBRE</h2>
+</div>
+
+<main class="tags-content">
+  <ul class="tags-list">   
+    <li>
+      <p class="post-content">
+        O Blog de Iot é um site mantido por <a target="#danielaraujorn" title="GitHub" href="https://github.com/danielaraujorn">Daniel Araújo</a> e <a target="#judsonc" title="GitHub" href="https://github.com/judsonc">Judson Costa</a>.
+        Todos com o objetivo de mostrar ferramentas, bibliotecas, APIs, tutoriais do mundo do software livre e de código aberto para as pessoas.
+      </p>
+
+      <div style="text-align:center">
+        <a target="#blog" href="https://github.com/danielaraujorn/blog"><i class="fa fa-github fa-3x"></i></a>
+      </div>
+    </li>
+  </ul>    
+</main>
+    
+{% include footer.html %}

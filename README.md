@@ -1,5 +1,11 @@
+# Repositório do Blog de IoT
+
+Link do Blog: [https://saiot.ect.ufrn.br/blog/](https://saiot.ect.ufrn.br/blog/)
+
 ## Instalação
+
 ```shell
-gem install jekyll-paginate jekyll-watch
-jekyll serve
+$ apt install jekyll -y
+$ gem install jekyll-paginate jekyll-watch
+$ jekyll serve
 ```
