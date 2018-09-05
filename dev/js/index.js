@@ -174,7 +174,8 @@ $(document).ready(function(){
             $('.icon-search').css('color', '#CAD3DC');
         }
 
-        $.getJSON('../../search.json').done(function(data) {
+        const BASE_URL = '/blog';
+        $.getJSON(`${BASE_URL}/search.json`).done(function(data) {
             var html = '';
             for (var i in data) {
                 var item = data[i];
@@ -184,7 +185,7 @@ $(document).ready(function(){
 
                 var k = title + tags;
                 if (keywords !== '' && k.toLowerCase().indexOf(keywords) >= 0) {
-                    html += '<a class="search_item" href="' + item.url + '">' + item.title + '</a>';
+                    html += `<a class="search_item" href="${BASE_URL + item.url}">${item.title}</a>`;
                 }
             }
             $('.search_result').html(html);
@@ -231,7 +232,7 @@ $(document).ready(function(){
      * Copy and copyright
      */
     function setClipboardData(str) {
-        str += '\n\n著作权归作者所有。\n商业转载请联系作者获得授权,非商业转载请注明出处。\n原文: ' + location.href;
+        str += `\n\n${document.title}\n${location.href}`;
         $('.post-content').on('copy', function(e) {
             var data = window.clipboardData || e.originalEvent.clipboardData;
             data.setData('text/plain', str);
