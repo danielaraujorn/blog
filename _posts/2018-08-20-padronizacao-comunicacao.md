@@ -16,11 +16,7 @@ Este post mostrará uma proposta de padronização semântica genérica para dis
 
 Um dispositivo é definido como um conjunto de controladores e sensores além de informações que ditarão sua comunicação com servidores. Algumas propriedades internas aos sensores e atuadores permitem a troca de dados com serviços que utilizam a padronização. Alguns desses são: a chave (_key_) é uma identificação única para cada controlador ou sensor em um dispositivo que juntamente com a identificação do serial, permite que as trocas de informações entre serviços sejam otimizadas.
 
-### Produto
-
-Para permitir que um produto seja usado no controle ou monitoramento de vários equipamentos, um produto é definido como um conjunto de dispositivos, barateando, por exemplo, aparatos para medição de água de uma rede de hidrômetros em que um mesmo produto (_hardware_) composto por vários dispositivos pode ser ligado a cada um dos hidrômetros, não sendo necessário a aquisição de um produto dedicado a cada hidrômetro.
-
-A estrutura demonstrada na primeira listagem, criada pela padronização proposta no presente artigo, permite que um desenvolvedor defina um produto a partir de um [JSON](https://www.json.org/json-pt.html) de configuração que possui detalhes sobre um dispositivo e o funcionamento de sensores e atuadores vinculados. A formatação da listagem define um dispositivo composto por sensores e controladores:
+A estrutura demonstrada na primeira listagem, criada a partir da padronização proposta, permite que um desenvolvedor defina um produto a partir de um [JSON](https://www.json.org/json-pt.html) de configuração que possui detalhes sobre um dispositivo e o funcionamento de sensores e atuadores vinculados. A formatação da listagem define um dispositivo composto por sensores e controladores:
 
 ```js
 {
