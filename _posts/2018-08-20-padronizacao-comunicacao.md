@@ -20,18 +20,16 @@ Um dispositivo é definido como um conjunto de controladores e sensores além de
 
 Para permitir que um produto seja usado no controle ou monitoramento de vários equipamentos, um produto é definido como um conjunto de dispositivos, barateando, por exemplo, aparatos para medição de água de uma rede de hidrômetros em que um mesmo produto (_hardware_) composto por vários dispositivos pode ser ligado a cada um dos hidrômetros, não sendo necessário a aquisição de um produto dedicado a cada hidrômetro.
 
-A estrutura demonstrada na primeira listagem, criada pela padronização proposta no presente artigo, permite que um desenvolvedor defina um produto a partir de um JSON de configuração que possui detalhes sobre os dispositivos e o funcionamento de sensores e atuadores vinculados. A formatação da listagem define um produto com apenas um dispositivo composto por sensores e controladores:
+A estrutura demonstrada na primeira listagem, criada pela padronização proposta no presente artigo, permite que um desenvolvedor defina um produto a partir de um [JSON](https://www.json.org/json-pt.html) de configuração que possui detalhes sobre um dispositivo e o funcionamento de sensores e atuadores vinculados. A formatação da listagem define um dispositivo composto por sensores e controladores:
 
 ```js
-[
-  {
-    name: "nome do dispositivo",
-    serial: "numero_de_serie",
-    protocol: "ws",
-    sensors: [],
-    controllers: []
-  }
-];
+{
+  name: "nome do dispositivo",
+  serial: "numero_de_serie",
+  protocol: "ws",
+  sensors: [],
+  controllers: []
+}
 ```
 
 ### Controlador
@@ -66,13 +64,18 @@ A Listagem a seguir mostra os controladores cadastrados em um dispositivo de exe
       type: "button",
       tag: "cor aleatoria"
     }
-  ];
+  ]
 }
 ```
 
+A imagem abaixo mostra a interface de usuário com alguns controladores que podem ser definidos através da listagem de configuração dos controles de um dispositivo.
+
+![Interface de controle]({{site.baseurl}}/assets/controle.png)
+
+
 ### Sensor
 
-Um sensor é formado por atributos, descritos na próxima listagem ,como o tipo (_type_), que pode ser \textit{number}, _boolean_, _point_, dentre outros, que define o tipo de dado enviado na comunicação; um sensor opera em estado de envio síncrono e assíncrono simultaneamente, ou seja, por intervalo de tempo (_timeout_) ou por extrapolação do valor de sua variação da medição do ultimo envio e atual medição excedendo o _deadBand_; caso esteja em regimento síncrono, o sensor forma pacotes de dados com intervalo de tempo com uma resolução (_resolution_); alguns tipos necessitam de informações adicionais como o tipo _number_, que em alguns casos possui um funcionamento acumulado (_accumulate_) informando se os dados são acumulados com o tempo ou se são valores instantâneos, possibilitando o servidor acumular e o dispositivo enviar somente o diferencial; e a unidade de medida (_unit_) na qual o sensor funciona e é visualizada pelo usuário.
+Um sensor é formado por atributos, descritos na próxima listagem ,como o tipo (_type_), que pode ser _number_, _boolean_, _point_, dentre outros, que define o tipo de dado enviado na comunicação um sensor opera em estado de envio síncrono e assíncrono simultaneamente, ou seja, por intervalo de tempo (_timeout_) ou por extrapolação do valor de sua variação da medição do ultimo envio e atual medição excedendo o _deadBand_ caso esteja em regimento síncrono, o sensor forma pacotes de dados com intervalo de tempo com uma resolução (_resolution_) alguns tipos necessitam de informações adicionais como o tipo _number_, que em alguns casos possui um funcionamento acumulado (_accumulate_) informando se os dados são acumulados com o tempo ou se são valores instantâneos, possibilitando o servidor acumular e o dispositivo enviar somente o diferencial e a unidade de medida (_unit_) na qual o sensor funciona e é visualizada pelo usuário.
 
 ```js
 {
@@ -105,7 +108,7 @@ Um sensor é formado por atributos, descritos na próxima listagem ,como o tipo 
       unit: "coordenadas",
       description: "gps do carro"
     }
-  ];
+  ]
 }
 ```
 
