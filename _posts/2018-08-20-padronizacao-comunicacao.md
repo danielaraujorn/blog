@@ -22,7 +22,6 @@ A estrutura demonstrada na primeira listagem, criada a partir da padronização 
 {
   name: "nome do dispositivo",
   serial: "numero_de_serie",
-  protocol: "ws",
   sensors: [],
   controllers: []
 }
@@ -66,7 +65,7 @@ A Listagem a seguir mostra os controladores cadastrados em um dispositivo de exe
 
 A imagem abaixo mostra a interface de usuário com alguns controladores que podem ser definidos através da listagem de configuração dos controles de um dispositivo.
 
-![Interface de controle]({{site.baseurl}}/assets/controle.png)
+![Interface de controle]({{site.baseurl}}/assets/post/padronizacao-comunicacao/controle.png)
 
 
 ### Sensor
