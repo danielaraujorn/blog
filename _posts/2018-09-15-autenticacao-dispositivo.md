@@ -30,7 +30,7 @@ Ao utilizar HTTPS, pode ser que o dispositivo necessita do [_fingerprint_](https
 
 **Resposta:** `2E AF 25 A1 65 69 00 6D 64 8D D3 10 D0 48 CE 63 CE 0B FC B0`
 
-#### Token de acesso
+### Token de acesso
 
 O primeiro passo da autenticação é requisitar um token de acesso que representa o vínculo de uma conta existente de usuário com o número de identificação de um dispositivo. Para isso, é preciso fazer a requisição a seguir.
 
@@ -50,7 +50,7 @@ O primeiro passo da autenticação é requisitar um token de acesso que represen
 
 **Resposta:** `cc1NUYhCHoB9bmrXvFk1`
 
-#### Utilizando o Token
+### Utilizando o Token
 
 O token de acesso deve ser enviado no corpo de **todas** as requisições seguindo o padrão abaixo.
 
@@ -65,7 +65,7 @@ O token de acesso deve ser enviado no corpo de **todas** as requisições seguin
 
 Esse padrão é obrigatório para todos os protocolos suportados pela aplicação.
 
-#### Observações
+### Observações
 
 Ao utilizar **_WebSocket_**, quando um dispositivo é conectado, a verificação do token ocorre quando é enviado alguma informação para a aplicação. Se o token estiver invalido, o dispositivo é desconectado.
 
