@@ -3,7 +3,7 @@ layout: post
 title: "Autenticação de dispositivos"
 date: 2018-09-15
 author: Judson Costa
-cover: "http://www.theadbuzz.com/wp-content/uploads/2015/05/insecure.jpg"
+cover: "https://www.elcorreogallego.es/img/noticias/20180130/protecciondatos_826037_manual.jpg"
 tags: desenvolvedor dispositivos autenticação
 comments: true
 ---
