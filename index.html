@@ -11,7 +11,7 @@ bannerUrl: /blog/assets/img/background.svg
   <h2>{{ page.home-title }}</h2>
   <h3>{{ page.description }}</h3>
   {% if page.header-img %}
-  <img class="header-img" src="{{ page.header-img | prepend: site.baseurl }}" alt=""> {% endif %}
+  <img class="header-img" src="{{ page.header-img | prepend: site.baseurl }}" alt="{{ page.home-title }}"> {% endif %}
 </div>
 
 <main class="g-container home-content">
@@ -20,8 +20,9 @@ bannerUrl: /blog/assets/img/background.svg
     <article class="article-item">
       {% if post.cover %}
       <div class="post-cover">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}"></a>
-        <img src="{{ post.cover }}" href="{{ post.url | prepend: site.baseurl }}" alt="">
+        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+          <img src="{{ post.cover }}" href="{{ post.url | prepend: site.baseurl }}" alt="{{ post.title }}">
+        </a>
       </div>
       {% endif %}
       <section class="post-preview" style="padding:10px 30px">
@@ -62,6 +63,7 @@ bannerUrl: /blog/assets/img/background.svg
         {% endfor %}
       </section>
       {% endif %}
+
       <!-- <section class="author-card">
         <div class="avatar">
           <img src="{{ site.avatar | prepend: site.baseurl }}" alt="">
@@ -82,6 +84,7 @@ bannerUrl: /blog/assets/img/background.svg
         </ul>
         {% endif %}
       </section> -->
+
     </div>
   </aside>
 </main>
