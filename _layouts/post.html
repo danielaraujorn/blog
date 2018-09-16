@@ -3,9 +3,6 @@
 {% include post-head.html %}
 
 <body>
-  <!--[if lt IE 10]>
-  <div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
-  <![endif]-->
   <input id="nm-switch" type="hidden" value="{{ site.nightMode }}"> {% include header.html %}
 
   <header class="g-banner post-header {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }} {% unless page.cover %}post-no-cover{% endunless %}"
@@ -20,7 +17,7 @@
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i><a href="{{ site.url }}" target="_blank" rel="author">{%
             if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-          </></span>
+        </span>
         <time class="post-meta-item" datetime="{{ page.date | date:" %y-%m-%d " }}"><i class="iconfont icon-date"></i>{{
           page.date | date_to_string }}</time>
       </div>
@@ -48,25 +45,26 @@
     <article class="markdown-body">
       <div id="disqus_thread"></div>
     </article>
-    
+
     <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = 'https://danielaraujorn.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+      /*
+      var disqus_config = function () {
+      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://danielaraujorn.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
     {% endif %}
   </div>
 
@@ -91,6 +89,7 @@
       </ul>
       {% endif %}
     </section> -->
+
   <section class="post-footer-item read-next">
     {% if page.next.url %}
     <div class="read-next-item">
@@ -123,9 +122,18 @@
 
   {% include footer.html %}
 
+  <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-4330756195385548",
+      enable_page_level_ads: true
+    });
+  </script> {% if site.mathjax %} {% include mathjax.html
+  %} {% endif %} {% include anchor.html %}
   <script src="{{site.baseurl}}/assets/js/social-share.min.js"></script>
   <script>
-     socialShare('.social-share', {
+    socialShare('.social-share', {
       sites: [
         {% for i in site.social-share-items %}
           '{{ i }}'
@@ -134,7 +142,7 @@
         {% endfor %}
       ],
       wechatQrcodeTitle: document.title,
-      wechatQrcodeHelper: '<p>'+ location.href +'</p>'
+      wechatQrcodeHelper: '<p>' + location.href + '</p>'
     });
   </script> {% if site.comments.disqus %}
   <script>
@@ -157,8 +165,8 @@
     })();
   </script> {% endif %}
 
-<script src="{{site.baseurl}}/assets/js/prism.js"></script>
-  <script src="{{site.baseurl}}/assets/js/index.min.js"></script>
+  <script async src="{{site.baseurl}}/assets/js/prism.js"></script>
+  <script async src="{{site.baseurl}}/assets/js/index.min.js"></script>
 </body>
 
 </html>
