@@ -22,7 +22,7 @@ Inicialmente, é obrigatório utilizar o protocolo [HTTP](https://developer.mozi
 
 Caso utilize o HTTP, pode pular para o tópico [Token de acesso](#token-de-acesso).
 
-Ao utilizar HTTPS, pode ser que o dispositivo necessita do [_fingerprint_](https://www.grc.com/fingerprints.htm) para fazer a requisição, então é possível ter acesso ao código _fingerprint_ ao fazer a seguinte requisição.
+Ao utilizar HTTPS, pode ser que o dispositivo necessite do [_fingerprint_](https://www.grc.com/fingerprints.htm) para fazer a requisição, então é possível ter acesso ao código _fingerprint_ ao fazer a seguinte requisição.
 
 **Protocolo:** `HTTP`
 
@@ -32,7 +32,7 @@ Ao utilizar HTTPS, pode ser que o dispositivo necessita do [_fingerprint_](https
 
 ### Token de acesso
 
-O primeiro passo da autenticação é requisitar um token de acesso que representa o vínculo de uma conta existente de usuário com o número de identificação de um dispositivo. Para isso, é preciso fazer a requisição a seguir.
+O primeiro passo da autenticação é requisitar um token de acesso que representa o vínculo de uma conta existente de usuário com o serial de um dispositivo. Para isso, é preciso fazer a requisição a seguir.
 
 **Protocolo:** `HTTP / HTTPS`
 
@@ -67,7 +67,11 @@ Esse padrão é obrigatório para todos os protocolos suportados pela aplicaçã
 
 ### Observações
 
-Ao utilizar **_WebSocket_**, quando um dispositivo é conectado, a verificação do token ocorre quando é enviado alguma informação para a aplicação. Se o token estiver invalido, o dispositivo é desconectado.
+Ao utilizar **_WebSocket_**, quando um dispositivo é conectado, a verificação do token ocorre quando é enviado alguma informação para a aplicação. Se o token estiver inválido, o dispositivo é desconectado.
+
+**Protocolo:** `WebSocket`
+
+**URL:** `ws.api.saiot.ect.ufrn.br`
 
 Quando um dispositivo utiliza o **MQTT**, há um passo a mais que deve ser feito na conexão com o SaIoT. O MQTT tem um recurso de autenticação intrínseco ao protocolo que permite enviar credenciais de acesso assim que é feita a conexão com a plataforma. Para isso, é preciso enviar os seguintes dados:
 
