@@ -28,7 +28,11 @@ Ao utilizar HTTPS, pode ser que o dispositivo necessite do [_fingerprint_](https
 
 **URL:** `GET auth.saiot.ect.ufrn.br/finger`
 
-**Resposta:** `2E AF 25 A1 65 69 00 6D 64 8D D3 10 D0 48 CE 63 CE 0B FC B0`
+**Resposta:** `23 4A C5 3B BD 8F D6 59 D0 11 BC 00 6F 0E 38 14 33 08 55 20`
+
+Com o código em mãos, é possível fazer requisições HTTPS para o SaIoT. Para exemplificar será feito uma requisição GET utilizando a biblioteca [ESP8266HTTPClient](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient).
+
+<script src="https://gist.github.com/judsonc/3a80e074bb361a270c6e51a3af51a6ac.js"></script>
 
 ### Token de acesso
 
