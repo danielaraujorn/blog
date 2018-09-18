@@ -20,7 +20,7 @@ A seguir será mostrado o fluxo dos dados desde um dispositivo é ligado e conec
 
 Inicialmente, é obrigatório utilizar o protocolo [HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP) ou [HTTPS](https://pt.wikipedia.org/wiki/Hyper_Text_Transfer_Protocol_Secure) (recomendado) mesmo que o dispositivo utilize outro protocolo suportado, como MQTT ou WebSocket. Todas as requisições devem ter no cabeçalho o `Content-Type: application/json`.
 
-Caso utilize o HTTP, pode pular para o tópico [Token de acesso](#token-de-acesso).
+Caso utilize o protocolo HTTP ou a biblioteca HTTPS utilizada não precise do _fingerprint_, avance para o tópico [Token de acesso](#token-de-acesso).
 
 Ao utilizar HTTPS, pode ser que o dispositivo necessite do [_fingerprint_](https://www.grc.com/fingerprints.htm) para fazer a requisição, então é possível ter acesso ao código _fingerprint_ ao fazer a seguinte requisição.
 

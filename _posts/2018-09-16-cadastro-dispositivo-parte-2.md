@@ -10,15 +10,15 @@ comments: true
 
 Este post mostra como fazer o cadastro de dispositivo no [SaIoT](https://saiot.ect.ufrn.br).
 
-Antes de fazer o cadastro de um dispositivo, é necessário fazer a descrição dele. É possível ler sobre isso no [cadastro de dispositivo - Parte 1](/blog/2018/09/16/cadastro-dispositivo-parte-1.html).
+Antes de fazer o cadastro de um dispositivo, é necessário fazer a sua descrição. Mais detalhes em [Cadastro de dispositivo - Parte 1](/blog/2018/09/16/cadastro-dispositivo-parte-1.html).
 
 ## Fluxo dos dados
 
-Ao enviar a configuração de um dispositivo, o SaIoT verifica se o serial de identificação já está ativado no sistema, caso esteja em uso, o SaIoT envia uma resposta informando a configuração salva para o dispositivo. A resposta da requisição varia de acordo com o protocolo utilizado pelo dispositivo, assim como é feita a requisição também.
+Ao enviar a configuração de um dispositivo, o SaIoT verifica se o serial de identificação já está ativado no sistema. Caso esteja em uso, é retornado a configuração salva, se não estiver, é retornado que o dispositivo está cadastrado como pendente (`device pending`). A resposta da requisição varia de acordo com o protocolo utilizado pelo dispositivo.
 
-## Cadastro de dispositivo
+## HTTP(S)
 
-Após fazer a descrição de um dispositivo, faça uma requisição POST enviando a configuração para o SaIoT para realizar o cadastro. Será mostrado um exemplo apenas com o protocolo HTTP(S).
+Após fazer a descrição de um dispositivo, faça uma requisição [POST](https://pt.wikipedia.org/wiki/POST_(HTTP)) enviando a configuração para o SaIoT para efetuar o cadastro.
 
 **Protocolo:** `HTTP / HTTPS`
 
@@ -26,6 +26,24 @@ Após fazer a descrição de um dispositivo, faça uma requisição POST enviand
 
 **Corpo:**
 
-<script src="https://gist.github.com/judsonc/bfba690ccdea36a703628eed3e5158b0.js"></script>
+<script src="https://gist.github.com/judsonc/fa3e5b6e48662ef9363d01239293d3b9.js"></script>
 
 **Resposta:** `device pending`
+
+## MQTT e _WebSocket_
+
+Com o dispositivo conectado utilizando **MQTT** ele deve se inscrever (_subscribe_) no tópico com o mesmo nome do serial de identificação para receber as respostas das publicações (_publish_). Se o dispositivo utilizar o **_WebSocket_**, as respostas das requisições (_emit_) serão recebidas no evento (_on_) com o mesmo nome do serial.
+
+**Protocolo:** `MQTT / WebSocket`
+
+**Tópico/Evento:** `/manager/post/device/`
+
+**Corpo:** Mesma mensagem enviada no protocolo HTTP(S)
+
+**Resposta:** `device pending`
+
+Com o dispositivo cadastrado como pendente, ele está visível para o usuário na interface e poderá cadastrá-lo. Ao usar o protocolo MQTT ou _WebSocket_, qualquer edição dos dados de configuração do dispositivo feita pelo usuário, o SaIoT enviará a nova configuração para o dispositivo no evento/tópico com o nome do serial. Para ter acesso a nova configuração utilizando o protocolo HTTP(S), faça a [requisição novamente](/blog/2018/09/16/cadastro-dispositivo-parte-2.html#https).
+
+<hr>
+
+Assim terminamos o cadastro de dispositivo na plataforma SaIoT. Nas próximas postagem iremos falar sobre o histórico, armazenamento de registros de sensoriamento.
