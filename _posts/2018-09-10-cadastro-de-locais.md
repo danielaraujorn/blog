@@ -3,7 +3,7 @@ layout: post
 title: "Cadastro de locais"
 date: 2018-09-10
 author: Daniel Araújo
-cover: "https://system.soprojetos.com.br/files/1063/planta_humanizada_zoom/modelo-de-casa-terrea-com-3-quartos-cod-96-planta-humanizada.jpg?1491503662"
+cover: "https://www.udf.edu.br/wp-content/uploads/2017/05/20170508_planta-baixa_arquitetura.jpg"
 tags: usuario cadastro locais
 comments: true
 ---

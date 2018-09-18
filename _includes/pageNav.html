@@ -5,9 +5,9 @@
   <div class="page-links">
     {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-      <a href="{{site.baseurl}}{{ "/" | relative_url }}" class="page-link" title="Página anterior">&laquo;</a>
+      <a href="{{ "/" | relative_url }}" class="page-link" title="Página anterior">&laquo;</a>
       {% else %}
-      <a href="{{site.baseurl}}/page{{ paginator.previous_page }}/" class="page-link" title="Próxima página">&laquo;</a>
+      <a href="/page{{ paginator.previous_page }}/" class="page-link" title="Próxima página">&laquo;</a>
       {% endif %}
     {% endif %}
     <div id="page-link-container"></div>
