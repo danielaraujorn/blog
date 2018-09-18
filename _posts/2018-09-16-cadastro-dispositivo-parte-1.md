@@ -57,9 +57,9 @@ Um dispositivo pode ter um conjunto de controladores em que cada controlador tem
   * tag*: permitido qualquer valor do tipo `string`. Nome do controlador;
   * class*: permitido os valores `toggle`, `slider`, `rgbx`, `onoff`, `pushbutton`, `button`. A classe diz como o controlador será visualizado pelo usuário na interface;
 
-As classes de controladores apresentam alguns detalhes que serão falados em uma futura postagem.
-
 <span style="font-size:14px">\* parâmetro obrigatório.</span>
+
+As classes de controladores apresentam alguns detalhes que serão falados em uma futura postagem.
 
 Agora será mostrado um exemplo de dispositivo com controladores e sensores. Esse dispositivo é um tomada inteligente que mede o consumo de energia e permite ser acionada remotamente. Segue configuração da tomada.
 
