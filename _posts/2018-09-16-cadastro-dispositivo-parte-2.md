@@ -3,7 +3,7 @@ layout: post
 title: "Cadastro de dispositivos - Parte 2"
 date: 2018-09-16
 author: Judson Costa
-cover: "/blog/assets/post/cadastro-dispositivo/dispositivos.png"
+cover: "/blog/assets/post/cadastro-dispositivo/dispositivos.jpg"
 tags: desenvolvedor dispositivos cadastro
 comments: true
 ---
