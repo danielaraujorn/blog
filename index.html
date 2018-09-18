@@ -59,7 +59,7 @@ bannerUrl: /blog/assets/img/background.svg
       {% if site.recommend-tags and site.tags.size>0 %}
       <section class="tags-card">
         {% for tag in site.tags %} {% if forloop.index > site.recommend-condition-size %} {% break %} {% endif %}
-        <a href="{{ " tags.html# " | append: tag[0] | prepend: site.baseurl }}" class="tag">{{ tag[0]}}</a>
+        <a href="{{ "/tags.html#" | append: tag[0] | prepend: site.baseurl }}" class="tag">{{ tag[0]}}</a>
         {% endfor %}
       </section>
       {% endif %}
