@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Cadastro de locais"
+title: "Gerenciamento de locais"
 date: 2018-09-10
 author: Daniel Araújo
 cover: "https://www.udf.edu.br/wp-content/uploads/2017/05/20170508_planta-baixa_arquitetura.jpg"
-tags: usuario cadastro locais
+tags: usuario gerenciamento cadastro locais
 comments: true
 ---
 
@@ -18,7 +18,7 @@ Para modelar o formato de casas, indústrias, instituições públicas e qualque
 
 Para dividirmos a casa abaixo e conseguir cadastrar seus cômodos, precisamos ter uma noção de cômodos que pertencem a outros cômodos. Um banheiro, por exemplo, é um local que pode ser um banheiro social ou de uma suíte, então o local banheiro pode pertencer a um quarto que por sua vez pertence ao primeiro andar da casa e que pertence a casa em si.
 
-![Planta baixa de uma casa]({{site.baseurl}}/assets/post/cadastro-locais/local-planta-baixa.jpg)
+![Planta baixa de uma casa]({{site.baseurl}}/assets/post/gerenciamento-locais/local-planta-baixa.jpg)
 
 Nesse exemplo, poderíamos criar o local **Casa de praia** onde ele possui locais como **Quarto 1**, **Quarto 2**, **Suíte**, **Cozinha**, dentre outros. A **Suíte** possui o local **Banheiro**.
 
@@ -26,10 +26,10 @@ Nesse exemplo, poderíamos criar o local **Casa de praia** onde ele possui locai
 
 Na imagem abaixo mostramos o cadastro do local **Casa**.
 
-![Cadastro do local Casa]({{site.baseurl}}/assets/post/cadastro-locais/cadastro-locais-1.png)
+![Cadastro do local Casa]({{site.baseurl}}/assets/post/gerenciamento-locais/cadastro-locais-1.png)
 
 Em seguida vamos cadastrar um local chamado **Quarto** pertencente ao local **Casa**.
 
-![Cadastro do local Quarto]({{site.baseurl}}/assets/post/cadastro-locais/cadastro-locais-2.png)
+![Cadastro do local Quarto]({{site.baseurl}}/assets/post/gerenciamento-locais/cadastro-locais-2.png)
 
 Assim nós cadastramos uma casa que possui um único quarto e podemos associar os dispositivos cadastrados aos locais e permitir uma mais fácil gestão de permissões de usuários e também a visualização e controle de dados.

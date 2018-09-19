@@ -16,6 +16,8 @@ Antes de fazer o cadastro de um dispositivo, é necessário fazer a sua descriç
 
 Ao enviar a configuração de um dispositivo, o SaIoT verifica se o serial de identificação já está ativado no sistema. Caso esteja em uso, é retornado a configuração salva, se não estiver, é retornado que o dispositivo está cadastrado como pendente (`device pending`). A resposta da requisição varia de acordo com o protocolo utilizado pelo dispositivo.
 
+**Todas as requisições feitas por dispositivos devem enviar juntamente o *token* de acesso, como informado na [Autenticação de dispositivo](/blog/2018/09/15/autenticacao-dispositivo.html).**
+
 ## HTTP(S)
 
 Após fazer a descrição de um dispositivo, faça uma requisição [POST](https://pt.wikipedia.org/wiki/POST_(HTTP)) enviando a configuração para o SaIoT para efetuar o cadastro.
@@ -46,4 +48,4 @@ Com o dispositivo cadastrado como pendente, ele está visível para o usuário n
 
 <hr>
 
-Assim terminamos o cadastro de dispositivo na plataforma SaIoT. Nas próximas postagem iremos falar sobre o histórico, armazenamento de registros de sensoriamento.
+Assim terminamos o cadastro de dispositivo na plataforma SaIoT.
