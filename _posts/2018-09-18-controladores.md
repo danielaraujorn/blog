@@ -23,11 +23,11 @@ O controlador slider é usado para controlar atuadores que possuem um range, com
 
 #### rgb
 ![Controlador slider]({{site.baseurl}}/assets/post/controladores/rgb.PNG)
-O controlador rgb renderiza um controle de *hue* para o usuário, e retorna um objeto json no seguinte formato: `{r:255,g:255,b:255}`.
+O controlador rgb renderiza um controle de *hue* para o usuário, e retorna um objeto json no seguinte formato: `{"r":255,"g":255,"b":255}`.
 
 #### rgbx
 ![Controlador slider]({{site.baseurl}}/assets/post/controladores/rgbx.PNG)
-O controlador rgbx renderiza um controle de *hue* para o usuário e um controle de saturação e vividez, e retorna um objeto json no seguinte formato: `{r:255,g:255,b:255,x:1}`, onde de 0 a 0.5 é controlado a saturação e de 0.5 a 1 é controlado a vividez. Para transformar para o padrão rgb, é só aplicar o seguinte algoritmo:
+O controlador rgbx renderiza um controle de *hue* para o usuário e um controle de saturação e vividez, e retorna um objeto json no seguinte formato: `{"r":255,"g":255,"b":255,"x":1}`, onde de 0 a 0.5 é controlado a saturação e de 0.5 a 1 é controlado a vividez. Para transformar para o padrão rgb, é só aplicar o seguinte algoritmo:
 ```javascript
 if (x <= 0.5){
   porcent = x / 0.5;
@@ -53,7 +53,7 @@ O toggle é um controlador que retorna o valor 0 e 1, usado para mudar o estado 
 O pushbutton é um botão no qual manda o valor 1 quando o usuário clica, e manda o valor 0 quando o usuário remove o dedo ou mouse do botão. É necessário ter cuidado com esse controlador pois se o usuário clicar com o mouse no botão e chegar a fechar a página antes de remover o clique do mouse, não será mandado o valor 0. Então é fortemente indicado utilizar um timout no seu dispositivo para que chame a função que seria chamada ao pushbutton enviar o valor 0, e então, atualizar o servidor com esse dado.
 
 ## Observação
-Par fazer uso de controladores com parâmetros adicionais na biblioteca, é necessário o uso do construtor do dispositivo passando o json completo, como: `{"class":"onoff",max:100,min:0,step:1}`
+Par fazer uso de controladores com parâmetros adicionais na biblioteca, é necessário o uso do construtor do dispositivo passando o json completo, como: `{"class":"onoff","max":100,"min":0,"step":1}`
 
 ## Exemplo
 Caso o programador queira fazer um dispositivo capaz de controlar uma luz dimerizável, é necessário um controlador capaz de ligar e desligar o dispositivo e também um seletor de intensidade para dimerizar a luz.
