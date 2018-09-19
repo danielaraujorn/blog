@@ -13,11 +13,9 @@ Continuando a série de postagens para desenvolvedores de dispositivos inteligen
   * Na primeira parte será mostrado como descrever um dispositivo, definindo suas características de forma compatível com a plataforma [SaIoT](https://saiot.ect.ufrn.br) ([leia mais aqui](/blog/2018/08/20/padronizacao-comunicacao.html)).
   * E na segunda parte como cadastrar um dispositivo na plataforma, ([leia mais aqui](/blog/2018/09/16/cadastro-dispositivo-parte-2.html)).
 
-Antes de iniciar a leitura, recomendamos que faça a leitura do post sobre a [autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html), porque esta postagem mostrará exemplos que necessitam que o dispositivo esteja conectado e autenticado.
+Para um dispositivo ser autenticado na plataforma só é necessário o uso de email e senha do usuário do dispositivo, não sendo necessário o uso de identificação do desenvolvedor. Antes de iniciar a leitura, recomendamos que faça a leitura do post sobre a [autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html), porque esta postagem mostrará exemplos que necessitam que o dispositivo esteja conectado e autenticado.
 
 Para cadastrar um dispositivo no SaIoT é preciso fazer uma descrição das características do dispositivo seguindo a [padronização suportada](/blog/2018/08/20/padronizacao-comunicacao.html) pela plataforma.
-
-Para um dispositivo ser autenticado na plataforma só é necessário o uso de email e senha do usuário do dispositivo, não sendo necessário o uso de identificação do desenvolvedor, como explicado [neste post](/blog/2018/09/15/autenticacao-dispositivo.html).
 
 ## Descrevendo um dispositivo
 
