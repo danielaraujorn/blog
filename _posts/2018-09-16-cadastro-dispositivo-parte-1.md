@@ -11,7 +11,7 @@ comments: true
 Continuando a série de postagens para desenvolvedores de dispositivos inteligentes, este post será divididos em duas partes.
 
   * Na primeira parte será mostrado como descrever um dispositivo, definindo suas características de forma compatível com a plataforma [SaIoT](https://saiot.ect.ufrn.br) ([leia mais aqui](/blog/2018/08/20/padronizacao-comunicacao.html)).
-  * E na segunda parte como cadastrar um dispositivo na plataforma, ([leia mais aqui](/blog/2018/09/16/cadastro-dispositivo-parte-2.html).
+  * E na segunda parte como cadastrar um dispositivo na plataforma, ([leia mais aqui](/blog/2018/09/16/cadastro-dispositivo-parte-2.html)).
 
 Antes de iniciar a leitura, recomendamos que faça a leitura do post sobre a [autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html), porque esta postagem mostrará exemplos que necessitam que o dispositivo esteja conectado e autenticado.
 
@@ -61,7 +61,7 @@ Um dispositivo pode ter um conjunto de controladores em que cada controlador tem
 
 <span style="font-size:14px">\* parâmetro obrigatório.</span>
 
-As classes de controladores apresentam alguns detalhes que serão falados em uma futura postagem.
+As classes de controladores apresentam alguns detalhes que são mostrado em [Controladores](/blog/2018/09/18/controladores.html).
 
 Agora será mostrado um exemplo de dispositivo com controladores e sensores. Esse dispositivo é um tomada inteligente que mede o consumo de energia e permite ser acionada remotamente. Segue configuração da tomada.
 
@@ -69,4 +69,4 @@ Agora será mostrado um exemplo de dispositivo com controladores e sensores. Ess
 
 <hr>
 
-Assim finalizamos a primeira parte sobre o cadastro de dispositivo. Na próxima parte iremos falar sobre o envio da configuração de dispositivo para o SaIoT, permitindo assim realizar o cadastro do dispositivo. 
+Assim finalizamos a primeira parte sobre o cadastro de dispositivo. Na próxima parte iremos falar sobre o envio da configuração de dispositivo para o SaIoT, permitindo assim realizar o [cadastro do dispositivo](/blog/2018/09/16/cadastro-dispositivo-parte-2.html).

@@ -4,7 +4,11 @@ title: "Controladores"
 date: 2018-09-18
 author: Daniel Araújo
 cover: "http://www.valisautomacao.com.br/dados/obras/sld20150824082917.JPG"
+<<<<<<< HEAD
 tags: desenvolvedor controladores padronização embarcados
+=======
+tags: desenvolvedor controladores padronização interface
+>>>>>>> master
 comments: true
 ---
 
