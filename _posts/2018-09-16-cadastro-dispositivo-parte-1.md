@@ -4,7 +4,7 @@ title: "Cadastro de dispositivos - Parte 1"
 date: 2018-09-16
 author: Judson Costa
 cover: "/blog/assets/post/cadastro-dispositivo/dispositivos.jpg"
-tags: desenvolvedor dispositivos cadastro
+tags: desenvolvedor dispositivos cadastro embarcados
 comments: true
 ---
 
@@ -16,6 +16,8 @@ Continuando a série de postagens para desenvolvedores de dispositivos inteligen
 Antes de iniciar a leitura, recomendamos que faça a leitura do post sobre a [autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html), porque esta postagem mostrará exemplos que necessitam que o dispositivo esteja conectado e autenticado.
 
 Para cadastrar um dispositivo no SaIoT é preciso fazer uma descrição das características do dispositivo seguindo a [padronização suportada](/blog/2018/08/20/padronizacao-comunicacao.html) pela plataforma.
+
+Para um dispositivo ser autenticado na plataforma só é necessário o uso de email e senha do usuário do dispositivo, não sendo necessário o uso de identificação do desenvolvedor, como explicado [neste post](/blog/2018/09/15/autenticacao-dispositivo.html).
 
 ## Descrevendo um dispositivo
 

@@ -4,7 +4,7 @@ title: "Autenticação de dispositivos"
 date: 2018-09-15
 author: Judson Costa
 cover: "https://www.elcorreogallego.es/img/noticias/20180130/protecciondatos_826037_manual.jpg"
-tags: desenvolvedor dispositivos autenticação
+tags: desenvolvedor dispositivos autenticação embarcados
 comments: true
 ---
 
@@ -12,11 +12,11 @@ Dando início a uma série de postagens para desenvolvedores que querem utilizar
 
 ### Requisitos
 
-Para um dispositivo autenticar-se ao SaIoT é necessário que ele esteja vinculado àlguma conta de usuário e tenha um serial (uma forma de identificação, número de série ou string que seja única). Esses dados são os únicos requisitos para fazer a autenticação.
+Para um dispositivo autenticar-se ao SaIoT é necessário que ele esteja vinculado a alguma conta de usuário e tenha um serial (uma forma de identificação, número de série ou string que seja única). Esses dados são os únicos requisitos para fazer a autenticação.
 
 ### Fluxo dos dados
 
-A seguir será mostrado o fluxo dos dados desde um dispositivo é ligado e conectado à internet até o momento que a conexão é autenticada. Isso sendo feito para os protocolos HTTP(S), [MQTT](https://www.ibm.com/developerworks/br/library/iot-mqtt-why-good-for-iot/index.html) e [_WebSocket_](https://developer.mozilla.org/pt-BR/docs/WebSockets).
+A seguir será mostrado o fluxo dos dados desde que um dispositivo é ligado e conectado à internet até o momento que a conexão é autenticada. Isso sendo feito para os protocolos HTTP(S), [MQTT](https://www.ibm.com/developerworks/br/library/iot-mqtt-why-good-for-iot/index.html) e [_WebSocket_](https://developer.mozilla.org/pt-BR/docs/WebSockets).
 
 Inicialmente, é obrigatório utilizar o protocolo [HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP) ou [HTTPS](https://pt.wikipedia.org/wiki/Hyper_Text_Transfer_Protocol_Secure) (recomendado) mesmo que o dispositivo utilize outro protocolo suportado, como MQTT ou WebSocket. Todas as requisições devem ter no cabeçalho o `Content-Type: application/json`.
 
