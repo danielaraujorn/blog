@@ -16,7 +16,7 @@ Antes de fazer o cadastro de um dispositivo, é necessário fazer a sua descriç
 
 Ao enviar a configuração de um dispositivo, o SaIoT verifica se o serial de identificação já está ativado no sistema. Caso esteja em uso, é retornado a configuração salva, se não estiver, é retornado que o dispositivo está cadastrado como pendente (`device pending`). A resposta da requisição varia de acordo com o protocolo utilizado pelo dispositivo.
 
-**Todas as requisições feitas por dispositivos devem enviar juntamente o *token* de acesso, como informado na [Autenticação de dispositivo](/blog/2018/09/15/autenticacao-dispositivo.html).**
+**Todas as requisições feitas por dispositivos devem enviar juntamente o *token* de acesso, como informado na [Autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html).**
 
 ## HTTP(S)
 

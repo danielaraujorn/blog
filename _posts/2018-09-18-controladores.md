@@ -3,7 +3,7 @@ layout: post
 title: "Controladores"
 date: 2018-09-18
 author: Daniel Araújo
-cover: "http://www.valisautomacao.com.br/dados/obras/sld20150824082917.JPG"
+cover: "https://www.soma.eng.br/wp-content/uploads/2015/05/soma_eletrica_03.jpg"
 tags: desenvolvedor controladores padronização interface embarcados
 comments: true
 ---
@@ -12,7 +12,7 @@ Neste post mostraremos o que é e como funciona os controladores segundo a padro
 
 A imagem a seguir mostra como é visualizado um dispositivo na página de controla, é evidenciado o controlador onoff e também é mostrado o ícone de uma engrenagem para abrir a página de interação com os controladores
 
-![Controlador onoff]({{site.baseurl}}/assets/post/controladores/dispositivo.PNG)
+![Controlador onoff]({{site.baseurl}}/assets/post/controladores/dispositivo.png)
 
 ## Classes de controladores existentes:
 
@@ -22,13 +22,13 @@ Como mostrado na ultima figura, o controlador **onoff** é um toggle indicado pa
 
 #### slider
 
-![Controlador slider]({{site.baseurl}}/assets/post/controladores/slider.PNG)
+![Controlador slider]({{site.baseurl}}/assets/post/controladores/slider.png)
 
 O controlador slider é usado para controlar atuadores que possuem um range, como uma janela, luz, ou até o volume de uma caixa de som. Esse controlador possui parâmetros adicionais, são eles: **min** (o valor mínimo do slider), **max** (o valor máximo do slider) e **step** (o passo). Exemplo: caso for utilizar para controlar uma luz podemos colocar o mínimo dela para ser 0, o máximo para ser 1 e o step para ser 0.01, assim a luz terá 100 níveis de luminosidade.
 
 #### rgb
 
-![Controlador slider]({{site.baseurl}}/assets/post/controladores/rgb.PNG)
+![Controlador slider]({{site.baseurl}}/assets/post/controladores/rgb.png)
 
 O controlador rgb renderiza um controle de *hue* para o usuário, e retorna um objeto json no seguinte formato: 
 
@@ -42,7 +42,7 @@ O controlador rgb renderiza um controle de *hue* para o usuário, e retorna um o
 
 #### rgbx
 
-![Controlador slider]({{site.baseurl}}/assets/post/controladores/rgbx.PNG)
+![Controlador slider]({{site.baseurl}}/assets/post/controladores/rgbx.png)
 
 O controlador rgbx renderiza um controle de *hue* para o usuário e um controle de saturação e vividez, e retorna um objeto json no seguinte formato: `{"r":255,"g":255,"b":255,"x":1}`, onde de 0 a 0.5 é controlado a saturação e de 0.5 a 1 é controlado a vividez. Para transformar para o padrão rgb, é só aplicar o seguinte algoritmo:
 
