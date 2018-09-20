@@ -114,7 +114,7 @@ A seguir será apresentado exemplos de envio com todos os protocolos suportados 
 
 Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, são eles: `number`, `string`, `point`, `boolean`. Abaixo será mostrado como esses tipos de valores (`value`) podem ser enviados.
 
-- Boolean
+- boolean
 
 ```json
 {
@@ -125,7 +125,7 @@ Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, 
 }
 ```
 
-- String
+- string
 
 ```json
 {
@@ -136,7 +136,7 @@ Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, 
 }
 ```
 
-- Number
+- number
 
 ```json
 {
@@ -147,7 +147,7 @@ Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, 
 }
 ```
 
-- Point (GeoLocation)
+- point (GeoLocation)
 
 ```json
 {
