@@ -8,7 +8,7 @@ tags: desenvolvedor dispositivos embarcados
 comments: true
 ---
 
-Nesta postagem será falado sobre a biblioteca responsável pela comunicação entre dispositivos que usam [ESP8266](https://www.filipeflop.com/blog/guia-do-usuario-do-esp8266/) e o middleware do projeto [SaIoT](https://saiot.ect.ufrn.br).
+Nesta postagem será falado sobre a biblioteca responsável pela comunicação entre dispositivos que usam [ESP8266](https://www.espressif.com/en/products/hardware/esp8266ex/overview) e o middleware do projeto [SaIoT](https://saiot.ect.ufrn.br).
 
 ## Conteúdo
 
@@ -42,12 +42,6 @@ SaIoTDeviceLib myDevice(deviceName, deviceSerial, emailUser);
 	
 - Para um **controlador** deve-se passar três parâmetros do tipo **Strings**, necessariamente nesta sequência: uma **key** (dado para ser usado como referência daquele controlador), uma **tag** (apenas para identificação), e a **class** do controlador (que indica como ele será renderizado na interface de usuário). Uma forma alternativa é passar todo o seu JSON de configuração. A utilização desse segundo construtor é uma boa alternativa para caso seu controlador tenha mais atributos. Saiba mais detalhes sobre os [controladores aqui](/blog/2018/09/18/controladores.html). 
 	
-```c++
-SaIoTController myController(controllerKey, controllerTag, controllerType);
-String jsonConfig;
-SaIoTController myController(jsonConfig);
-```
-
 Exemplo de configuração de um controlador para acionamento de algo:
 
 ```json
@@ -86,7 +80,7 @@ myDevice.addController(&SaIoTController);
 myDevice.addSensor(&SaIoTSensor);
 ```
 
-2. Iniciando a parte de comunicação, o objeto do tipo **WiFiClient** e a função de **Callback**, explicada anteriormente, devem ser passadas. A função de **Callback** deverá ter a mesma estrutura do exemplo a seguir.
+2. Iniciando a parte de comunicação, o objeto do tipo **WiFiClient** e a função de **Callback** devem ser passadas. A função de **Callback** deverá ter a mesma estrutura do exemplo a seguir.
 
 ```c++
 myDevice.preSetCom(&WiFiClient, &callback);

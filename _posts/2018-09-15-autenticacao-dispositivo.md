@@ -40,7 +40,9 @@ O primeiro passo da autenticação é requisitar um token de acesso que represen
 
 **Protocolo:** `HTTP / HTTPS`
 
-**URL:** `POST api.saiot.ect.ufrn.br/v1/device/auth/login`
+**URL:** 
+
+`POST api.saiot.ect.ufrn.br/v1/device/auth/login`
 
 **Corpo:**
 

@@ -24,7 +24,9 @@ Após fazer a descrição de um dispositivo, faça uma requisição [POST](https
 
 **Protocolo:** `HTTP / HTTPS`
 
-**URL:** `POST api.saiot.ect.ufrn.br/v1/device/manager/device`
+**URL:** 
+
+`POST api.saiot.ect.ufrn.br/v1/device/manager/device`
 
 **Corpo:**
 

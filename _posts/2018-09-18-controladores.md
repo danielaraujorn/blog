@@ -10,7 +10,7 @@ comments: true
 
 Neste post mostraremos o que é e como funciona os controladores segundo a padronização usada pelo sistema [SaIoT](https://saiot.ect.ufrn.br). Como já foi explicado resumidamente no post [Cadastro de dispositivos](/blog/2018/09/16/cadastro-dispositivo-parte-1.html), controladores são componentes responsáveis por ativar atuadores. O retorno de dados de um controlador é definido pelo desenvolvedor do controlador, como o atuador de um dispositivo usa esse retorno é de decisão do desenvolvedor do dispositivo.
 
-A imagem a seguir mostra como é visualizado um dispositivo na página de controla, é evidenciado o controlador onoff e também é mostrado o ícone de uma engrenagem para abrir a página de interação com os controladores
+A imagem a seguir mostra como é visualizado um dispositivo na página de controle, é evidenciado o controlador onoff e também é mostrado o ícone de uma engrenagem para abrir a página de interação com os controladores
 
 ![Controlador onoff]({{site.baseurl}}/assets/post/controladores/dispositivo.png)
 
@@ -18,13 +18,13 @@ A imagem a seguir mostra como é visualizado um dispositivo na página de contro
 
 #### onoff
 
-Como mostrado na ultima figura, o controlador **onoff** é um toggle indicado para ligar e desligar o dispositivo. Ele retorna o valor 0 e 1.
+Como mostrado na última figura, o controlador **onoff** é um toggle indicado para ligar e desligar o dispositivo. Ele retorna o valor 0 e 1.
 
 #### slider
 
 ![Controlador slider]({{site.baseurl}}/assets/post/controladores/slider.png)
 
-O controlador slider é usado para controlar atuadores que possuem um range, como uma janela, luz, ou até o volume de uma caixa de som. Esse controlador possui parâmetros adicionais, são eles: **min** (o valor mínimo do slider), **max** (o valor máximo do slider) e **step** (o passo). Exemplo: caso for utilizar para controlar uma luz podemos colocar o mínimo dela para ser 0, o máximo para ser 1 e o step para ser 0.01, assim a luz terá 100 níveis de luminosidade.
+O controlador slider é usado para controlar atuadores que possuem um range, como uma janela, luz, ou até o volume de uma caixa de som. Esse controlador possui parâmetros adicionais, são eles: **min** (o valor mínimo do slider), **max** (o valor máximo do slider) e **step** (o passo). Exemplo: caso for utilizar para controlar uma luz podemos colocar o mínimo dela para ser 1, o máximo para ser 100 e o step para ser 1, assim a luz terá 100 níveis de luminosidade.
 
 #### rgb
 
@@ -78,7 +78,7 @@ Par fazer uso de controladores com parâmetros adicionais na biblioteca, é nece
 
 ```json
 {
-  "class": "onoff",
+  "class": "slider",
   "max": 100,
   "min": 0,
   "step": 1
@@ -88,4 +88,4 @@ Par fazer uso de controladores com parâmetros adicionais na biblioteca, é nece
 ## Exemplo
 
 Caso o programador queira fazer um dispositivo capaz de controlar uma luz dimerizável, é necessário um controlador capaz de ligar e desligar o dispositivo e também um seletor de intensidade para dimerizar a luz.
-Para esse caso, é aconselhado usar o controlar **onoff** que retorna o valor 1 ou 0 e o desenvolvedor cria uma função para que quando receber esses valores, o controlador ser capaz de desligar e ligar a luz. Para dimerizar, usa-se o controlador **slider** onde é possivel passar o valor mínimo, máximo e o step.
+Para esse caso, é aconselhado usar o controlador **onoff** que retorna o valor 1 ou 0 e o desenvolvedor cria uma função para que quando receber esses valores, o controlador ser capaz de desligar e ligar a luz. Para dimerizar, usa-se o controlador **slider** onde é possível passar o valor mínimo, máximo e o step.

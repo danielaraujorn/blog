@@ -20,7 +20,9 @@ Para registrar uma conta de usuário é preciso fazer uma requisição ao seguin
 
 **Protocolo:** `HTTP / HTTPS`
 
-**URL:** `POST api.saiot.ect.ufrn.br/v1/client/auth/register`
+**URL:** 
+
+`POST api.saiot.ect.ufrn.br/v1/client/auth/register`
 
 **Corpo:**
 
@@ -54,7 +56,9 @@ A rota a seguir realiza o login de uma conta de usuário.
 
 **Protocolo:** `HTTP / HTTPS`
 
-**URL:** `POST api.saiot.ect.ufrn.br/v1/client/auth/login`
+**URL:** 
+
+`POST api.saiot.ect.ufrn.br/v1/client/auth/login`
 
 **Corpo:**
 
@@ -86,7 +90,9 @@ A rota a seguir encerra a sessão de uma conta de usuário.
 
 **Protocolo:** `HTTP / HTTPS`
 
-**URL:** `POST api.saiot.ect.ufrn.br/v1/client/auth/logout`
+**URL:** 
+
+`POST api.saiot.ect.ufrn.br/v1/client/auth/logout`
 
 **Resposta:**
 
