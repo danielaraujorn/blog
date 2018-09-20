@@ -25,7 +25,9 @@ E também é obrigatório o envio da data no formato `ano-mes-dia hr:mm:ss.ms` p
 
 **Protocolo:** `HTTP / HTTPS`
 
-**URL:** `GET api.saiot.ect.ufrn.br/v1/device/history/datetime`
+**URL:**
+
+`GET api.saiot.ect.ufrn.br/v1/device/history/datetime`
 
 **Resposta:** `2018-09-19 12:41:52.220`
 
@@ -114,7 +116,7 @@ A seguir será apresentado exemplos de envio com todos os protocolos suportados 
 
 Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, são eles: `number`, `string`, `point`, `boolean`. Abaixo será mostrado como esses tipos de valores (`value`) podem ser enviados.
 
-- Boolean
+- boolean
 
 ```json
 {
@@ -125,7 +127,7 @@ Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, 
 }
 ```
 
-- String
+- string
 
 ```json
 {
@@ -136,7 +138,7 @@ Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, 
 }
 ```
 
-- Number
+- number
 
 ```json
 {
@@ -147,7 +149,7 @@ Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, 
 }
 ```
 
-- Point (GeoLocation)
+- point (GeoLocation)
 
 ```json
 {

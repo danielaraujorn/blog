@@ -58,7 +58,7 @@ Exemplo de configuração de um controlador para acionamento de algo:
 }
 ```
 
-- Para um **sensor** deve-se passar como parâmetros **4 Strings**, necessariamente nesta sequência: uma **key** (dado para ser usado como referência daquele sensor), uma **tag**, a **unidade de medida** (para o dado a ser mensurado, como por exemplo Litros) e o **tipo** do dado (Boolean, String, Point, Number); assim como para o controlador, há uma forma alternativa de construtor no qual deve-se ser passado todo o seu JSON de configuração.
+- Para um **sensor** deve-se passar como parâmetros **4 Strings**, necessariamente nesta sequência: uma **key** (dado para ser usado como referência daquele sensor), uma **tag**, a **unidade de medida** (para o dado a ser mensurado, como por exemplo Litros) e o **tipo** do dado (`boolean`, `string`, `point`, `number`); assim como para o controlador, há uma forma alternativa de construtor no qual deve-se ser passado todo o seu JSON de configuração.
 
 ```c++
 SaIoTSensor mySensor(sensorKey,sensorTag,dataUnit,dataType);
