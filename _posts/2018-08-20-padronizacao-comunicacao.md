@@ -4,7 +4,7 @@ title: "Padronização de comunicação"
 date: 2018-08-20
 author: Daniel Araújo
 cover: "https://startupi.com.br/wp-content/uploads/2018/03/iot-770x250.jpg"
-tags: desenvolvedor padronização dispositivos
+tags: desenvolvedor padronização comunicação embarcados
 comments: true
 ---
 
