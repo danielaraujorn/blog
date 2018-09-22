@@ -11,7 +11,9 @@ comments: true
 Neste post mostraremos como criar ou editar locais passo a passo pelo sistema [SaIoT](https://saiot.ect.ufrn.br).
 
 ### O que são locais?
+
 Para modelar o formato de casas, indústrias, instituições públicas e qualquer local físico, criamos os locais virtuais onde você pode definir os cômodos de sua casa, por exemplo, e conseguir descrever as divisões dos mesmos. Cada local possui permissões de acesso para usuários cadastrados.
+
 <!-- Colocar o link do post sobre permissões -->
 
 ### Exemplo
@@ -32,4 +34,10 @@ Em seguida vamos cadastrar um local chamado **Quarto** pertencente ao local **Ca
 
 ![Cadastro do local Quarto]({{site.baseurl}}/assets/post/gerenciamento-locais/cadastro-locais-2.png)
 
-Assim nós cadastramos uma casa que possui um único quarto e podemos associar os dispositivos cadastrados aos locais e permitir uma mais fácil gestão de permissões de usuários e também a visualização e controle de dados.
+### Excluindo um local
+
+No gerenciamento também é possível apagar um local. Quando isso é feito, todos os dispositivos que estão vinculados ao local ficarão visíveis para os usuários que os cadastraram no sistema. Assim, o usuário que cadastrou o dispositivo poderá vinculá-lo novamente a um novo local.
+
+<hr>
+
+Assim mostramos como cadastrar uma casa que possui um único quarto e podemos associar os dispositivos cadastrados aos locais e permitir uma mais fácil gestão de permissões de usuários e também a visualização e controle de dados.
