@@ -8,11 +8,11 @@ tags: desenvolvedor dispositivos autenticação embarcados
 comments: true
 ---
 
-Dando início a uma série de postagens para desenvolvedores que querem utilizar a plataforma [SaIoT](https://saiot.ect.ufrn.br) para armazenar e gerenciar dispositivos, começaremos falando sobre como fazer a autenticação de dispositivos.
+Dando início a uma série de postagens para desenvolvedores que querem utilizar a plataforma [Saiot](https://saiot.ect.ufrn.br) para armazenar e gerenciar dispositivos, começaremos falando sobre como fazer a autenticação de dispositivos.
 
 ### Requisitos
 
-Para um dispositivo autenticar-se ao SaIoT é necessário que ele esteja vinculado a alguma conta de usuário e tenha um serial (uma forma de identificação, número de série ou string que seja única). Esses dados são os únicos requisitos para fazer a autenticação.
+Para um dispositivo autenticar-se ao Saiot é necessário que ele esteja vinculado a alguma conta de usuário e tenha um serial (uma forma de identificação, número de série ou string que seja única). Esses dados são os únicos requisitos para fazer a autenticação.
 
 ### Fluxo dos dados
 
@@ -30,7 +30,7 @@ Ao utilizar HTTPS, pode ser que o dispositivo necessite do [_fingerprint_](https
 
 **Resposta:** `23 4A C5 3B BD 8F D6 59 D0 11 BC 00 6F 0E 38 14 33 08 55 20`
 
-Com o código em mãos, é possível fazer requisições HTTPS para o SaIoT. Para exemplificar será feito uma requisição GET utilizando a biblioteca [ESP8266HTTPClient](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient).
+Com o código em mãos, é possível fazer requisições HTTPS para o Saiot. Para exemplificar será feito uma requisição GET utilizando a biblioteca [ESP8266HTTPClient](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient).
 
 <script src="https://gist.github.com/judsonc/3a80e074bb361a270c6e51a3af51a6ac.js"></script>
 
@@ -79,7 +79,7 @@ Ao utilizar **_WebSocket_**, quando um dispositivo é conectado, a verificação
 
 **URL:** `ws.api.saiot.ect.ufrn.br`
 
-Quando um dispositivo utiliza o **MQTT**, há um passo a mais que deve ser feito na conexão com o SaIoT. O MQTT tem um recurso de autenticação intrínseco ao protocolo que permite enviar credenciais de acesso assim que é feita a conexão com a plataforma. Para isso, é preciso enviar os seguintes dados:
+Quando um dispositivo utiliza o **MQTT**, há um passo a mais que deve ser feito na conexão com o Saiot. O MQTT tem um recurso de autenticação intrínseco ao protocolo que permite enviar credenciais de acesso assim que é feita a conexão com a plataforma. Para isso, é preciso enviar os seguintes dados:
 
 **Protocolo:** `MQTT`
 

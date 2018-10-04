@@ -8,7 +8,7 @@ tags: desenvolvedor dispositivos embarcados
 comments: true
 ---
 
-Nesta postagem será falado sobre a biblioteca responsável pela comunicação entre dispositivos que usam [ESP8266](https://www.espressif.com/en/products/hardware/esp8266ex/overview) e o middleware do projeto [SaIoT](https://saiot.ect.ufrn.br).
+Nesta postagem será falado sobre a biblioteca responsável pela comunicação entre dispositivos que usam [ESP8266](https://www.espressif.com/en/products/hardware/esp8266ex/overview) e o middleware do projeto [Saiot](https://saiot.ect.ufrn.br).
 
 ## Conteúdo
 
@@ -26,26 +26,26 @@ Nesta postagem será falado sobre a biblioteca responsável pela comunicação e
 3. Incluir no arquivo fonte as instruções:
 
 ```c
-#include <SaIoTDeviceLib.h>
+#include <SaiotDeviceLib.h>
 ```
 
 ### Escopo Global
 
-1. No **escopo de varáveis globais**, deve-se instanciar um objeto tipo **WiFiClient**, declarar a função de callback (caso seja usado o protocolo MQTT) e declarar um objeto do tipo **SaIoTDeviceLib** com seus respectivos atributos. Para isso, é preciso definir três valores do tipo `String`, são eles: o nome do dispositivo (`deviceName`), o serial de identificação do dispositivo (`deviceSerial`) e o email (`emailUser`) de uma conta de usuário válida no SaIoT de quem irá cadastrar o dispositivo em questão, respectivamente.
+1. No **escopo de varáveis globais**, deve-se instanciar um objeto tipo **WiFiClient**, declarar a função de callback (caso seja usado o protocolo MQTT) e declarar um objeto do tipo **SaiotDeviceLib** com seus respectivos atributos. Para isso, é preciso definir três valores do tipo `String`, são eles: o nome do dispositivo (`deviceName`), o serial de identificação do dispositivo (`deviceSerial`) e o email (`emailUser`) de uma conta de usuário válida no Saiot de quem irá cadastrar o dispositivo em questão, respectivamente.
 
 ```c++
 WiFiClient espClient;
 void callback(char* topic, byte* payload, unsigned int length);
-SaIoTDeviceLib myDevice(deviceName, deviceSerial, emailUser);
+SaiotDeviceLib myDevice(deviceName, deviceSerial, emailUser);
 ```
 
-2. Deve-se inicializar todos os controladores e sensores que fazem parte do dispositivo a ser criado utilizando, respectivamente, as classes **SaIoTController** e **SaIoTSensor**.
+2. Deve-se inicializar todos os controladores e sensores que fazem parte do dispositivo a ser criado utilizando, respectivamente, as classes **SaiotController** e **SaiotSensor**.
 
 - Para um **controlador** deve-se passar três parâmetros do tipo **Strings**, necessariamente nesta sequência: uma **key** (dado para ser usado como referência daquele controlador), uma **tag** (apenas para identificação), e a **class** do controlador (que indica como ele será renderizado na interface de usuário). Uma forma alternativa é passar todo o seu JSON de configuração. A utilização desse segundo construtor é uma boa alternativa para caso seu controlador tenha mais atributos. Saiba mais detalhes sobre os [controladores aqui](/blog/2018/09/18/controladores.html).
 
 ```c++
-SaIoTController myController(controllerKey, controllerTag, controllerType);
-SaIoTController myController("{\"key\":\"controllerKeyJSON\",\"tag\":\"controllerTagJSON\",\"class\":\"onoff\"}");
+SaiotController myController(controllerKey, controllerTag, controllerType);
+SaiotController myController("{\"key\":\"controllerKeyJSON\",\"tag\":\"controllerTagJSON\",\"class\":\"onoff\"}");
 ```
 
 Exemplo de configuração de um controlador para acionamento de algo:
@@ -61,8 +61,8 @@ Exemplo de configuração de um controlador para acionamento de algo:
 - Para um **sensor** deve-se passar como parâmetros **4 Strings**, necessariamente nesta sequência: uma **key** (dado para ser usado como referência daquele sensor), uma **tag**, a **unidade de medida** (para o dado a ser mensurado, como por exemplo Litros) e o **tipo** do dado (`boolean`, `string`, `point`, `number`); assim como para o controlador, há uma forma alternativa de construtor no qual deve-se ser passado todo o seu JSON de configuração.
 
 ```c++
-SaIoTSensor mySensor(sensorKey,sensorTag,dataUnit,dataType);
-SaIoTSensor mySensor("{\"key\":\"hidro01\",\"tag\":\"hidrometro_01\",\"unit\":\"Litros\",\"type\":\"number\"}");
+SaiotSensor mySensor(sensorKey,sensorTag,dataUnit,dataType);
+SaiotSensor mySensor("{\"key\":\"hidro01\",\"tag\":\"hidrometro_01\",\"unit\":\"Litros\",\"type\":\"number\"}");
 ```
 
 Exemplo de configuração de um sensor:
@@ -78,7 +78,7 @@ Exemplo de configuração de um sensor:
 
 ### Setup
 
-1. Na função **Setup** é preciso associar os **Sensores** e **Controladores**, previamente instanciados, com o **Device**, utilizando os seguintes métodos da classe SaIoTDeviceLib, para **cada** controlador e sensor:
+1. Na função **Setup** é preciso associar os **Sensores** e **Controladores**, previamente instanciados, com o **Device**, utilizando os seguintes métodos da classe SaiotDeviceLib, para **cada** controlador e sensor:
 
 ```c++
 myDevice.addController(myController);
@@ -117,7 +117,7 @@ void callback(char* topic, byte* payload, unsigned int length){
 }
 ```
 
-**OBS.:** Para enviar dados do sensor, o método a seguir, da classe **SaIoTSensor**, deverá ser chamado passando o valor (double), a data e hora do dispositivo.
+**OBS.:** Para enviar dados do sensor, o método a seguir, da classe **SaiotSensor**, deverá ser chamado passando o valor (double), a data e hora do dispositivo.
 
 ```c++
 double valor;

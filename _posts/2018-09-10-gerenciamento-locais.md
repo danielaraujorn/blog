@@ -8,7 +8,7 @@ tags: usuario gerenciamento cadastro locais
 comments: true
 ---
 
-Neste post mostraremos como criar ou editar locais passo a passo pelo sistema [SaIoT](https://saiot.ect.ufrn.br).
+Neste post mostraremos como criar ou editar locais passo a passo pelo sistema [Saiot](https://saiot.ect.ufrn.br).
 
 ### O que são locais?
 

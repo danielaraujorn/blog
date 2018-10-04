@@ -8,7 +8,7 @@ tags: desenvolvedor controladores padronização interface embarcados
 comments: true
 ---
 
-Neste post mostraremos o que é e como funciona os controladores segundo a padronização usada pelo sistema [SaIoT](https://saiot.ect.ufrn.br). Como já foi explicado resumidamente no post [Cadastro de dispositivos](/blog/2018/09/16/cadastro-dispositivo-parte-1.html), controladores são componentes responsáveis por ativar atuadores. O retorno de dados de um controlador é definido pelo desenvolvedor do controlador, como o atuador de um dispositivo usa esse retorno é de decisão do desenvolvedor do dispositivo.
+Neste post mostraremos o que é e como funciona os controladores segundo a padronização usada pelo sistema [Saiot](https://saiot.ect.ufrn.br). Como já foi explicado resumidamente no post [Cadastro de dispositivos](/blog/2018/09/16/cadastro-dispositivo-parte-1.html), controladores são componentes responsáveis por ativar atuadores. O retorno de dados de um controlador é definido pelo desenvolvedor do controlador, como o atuador de um dispositivo usa esse retorno é de decisão do desenvolvedor do dispositivo.
 
 A imagem a seguir mostra como é visualizado um dispositivo na página de controle, é evidenciado o controlador onoff e também é mostrado o ícone de uma engrenagem para abrir a página de interação com os controladores
 

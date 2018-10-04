@@ -8,7 +8,7 @@ tags: desenvolvedor dispositivos embarcados
 comments: true
 ---
 
-Esta postagem fala sobre o módulo Histórico e como utilizá-lo para armazenar dados gerados por dispositivos inteligentes. O Histórico está integrado ao sistema [SaIoT](https://saiot.ect.ufrn.br).
+Esta postagem fala sobre o módulo Histórico e como utilizá-lo para armazenar dados gerados por dispositivos inteligentes. O Histórico está integrado ao sistema [Saiot](https://saiot.ect.ufrn.br).
 
 ## Histórico
 
@@ -16,12 +16,12 @@ O Histórico (_history_) é um módulo historiador que permite armazenar dados e
 
 ## Requisitos
 
-Para utilizar o Histórico, é preciso que o dispositivo esteja autenticado e envie os dados no formato definido pelo SaIoT (falado a seguir). A postagem [Autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html) explica sobre isso.
+Para utilizar o Histórico, é preciso que o dispositivo esteja autenticado e envie os dados no formato definido pelo Saiot (falado a seguir). A postagem [Autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html) explica sobre isso.
 
 Além da autenticação, os valores reportados devem ter o mesmo tipo (`type`) definido no arquivo de configuração do dispositivo. Esses parâmetros foram explicados em [Cadastro de dispositivos - Parte 1
 ](/blog/2018/09/16/cadastro-dispositivo-parte-1.html).
 
-E também é obrigatório o envio da data no formato `ano-mes-dia hr:mm:ss.ms` para dizer o horário que o dado foi captado pelo dispositivo. O SaIoT tem um endereço que fornece a data-hora no formato definido.
+E também é obrigatório o envio da data no formato `ano-mes-dia hr:mm:ss.ms` para dizer o horário que o dado foi captado pelo dispositivo. O Saiot tem um endereço que fornece a data-hora no formato definido.
 
 **Protocolo:** `HTTP / HTTPS`
 
@@ -40,7 +40,7 @@ Para enviar dados para a plataforma, o dispositivo pode utilizar um dos três pr
 
 ## Exemplos
 
-A seguir será apresentado exemplos de envio com todos os protocolos suportados pelo SaIoT e com as duas formatações de envio válidas.
+A seguir será apresentado exemplos de envio com todos os protocolos suportados pelo Saiot e com as duas formatações de envio válidas.
 
 **Todas as requisições feitas por dispositivos devem enviar juntamente o *token* de acesso, como informado na [Autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html).**
 
@@ -167,4 +167,4 @@ Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, 
 
 <hr>
 
-Assim terminamos mais uma postagem sobre a plataforma SaIoT que contém diversos módulos, sendo o Histórico um deles, que visam facilitar o desenvolvimento de aplicações de IoT.
+Assim terminamos mais uma postagem sobre a plataforma Saiot que contém diversos módulos, sendo o Histórico um deles, que visam facilitar o desenvolvimento de aplicações de IoT.

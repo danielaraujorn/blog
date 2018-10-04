@@ -8,11 +8,11 @@ tags: dispositivos gerenciamento usuario cadastro
 comments: true
 ---
 
-Neste post mostraremos como gerenciar os dispositivos passo a passo pelo sistema [SaIoT](https://saiot.ect.ufrn.br).
+Neste post mostraremos como gerenciar os dispositivos passo a passo pelo sistema [Saiot](https://saiot.ect.ufrn.br).
 
 ### Criando uma conta
 
-Primeiramente é preciso que você se registre no [SaIoT](https://saiot.ect.ufrn.br). Isso pode ser feito inserindo as credenciais diretamente no SaIoT ou utilizando uma conta do [SIGAA](https://sigaa.ufrn.br), caso você tenha uma, como mostrado na imagem a seguir.
+Primeiramente é preciso que você se registre no [Saiot](https://saiot.ect.ufrn.br). Isso pode ser feito inserindo as credenciais diretamente no Saiot ou utilizando uma conta do [SIGAA](https://sigaa.ufrn.br), caso você tenha uma, como mostrado na imagem a seguir.
 
 ![Tela de registrar conta]({{site.baseurl}}/assets/post/gerenciamento-dispositivos/registro.png)
 
@@ -22,11 +22,11 @@ Após criar uma conta, é preciso [cadastrar um local]({{site.baseurl}}/2018/09/
 
 ![tela do dispositivo no modo ap]({{site.baseurl}}/assets/post/gerenciamento-dispositivos/modoap.png)
 
-É preciso definir qual o nome (SSID) e senha da rede disponível para conectar o dispositivo à internet, além do email e senha de uma conta do SaIoT.
+É preciso definir qual o nome (SSID) e senha da rede disponível para conectar o dispositivo à internet, além do email e senha de uma conta do Saiot.
 
 ![tela do dispositivo no modo ap]({{site.baseurl}}/assets/post/gerenciamento-dispositivos/wifimanager.png)
 
-Com o dispositivo conectado à internet, acesse o [SaIoT](https://saiot.ect.ufrn.br) com as mesmas credenciais utilizadas na configuração do dispositivo. Na interface, o dispositivo aparecerá na lista de pendentes de cadastro no menu superior (+).
+Com o dispositivo conectado à internet, acesse o [Saiot](https://saiot.ect.ufrn.br) com as mesmas credenciais utilizadas na configuração do dispositivo. Na interface, o dispositivo aparecerá na lista de pendentes de cadastro no menu superior (+).
 
 ![ícone para o abrir o menu de pendentes]({{site.baseurl}}/assets/post/gerenciamento-dispositivos/pendente.png)
 

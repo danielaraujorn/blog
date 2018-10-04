@@ -10,18 +10,18 @@ comments: true
 
 Continuando a série de postagens para desenvolvedores de dispositivos inteligentes, este post será divididos em duas partes.
 
-  * Na primeira parte será mostrado como descrever um dispositivo, definindo suas características de forma compatível com a plataforma [SaIoT](https://saiot.ect.ufrn.br) ([leia mais aqui](/blog/2018/08/20/padronizacao-comunicacao.html)).
+  * Na primeira parte será mostrado como descrever um dispositivo, definindo suas características de forma compatível com a plataforma [Saiot](https://saiot.ect.ufrn.br) ([leia mais aqui](/blog/2018/08/20/padronizacao-comunicacao.html)).
   * E na segunda parte como cadastrar um dispositivo na plataforma, ([leia mais aqui](/blog/2018/09/16/cadastro-dispositivo-parte-2.html)).
 
 Para um dispositivo ser autenticado na plataforma só é necessário o uso de email e senha do usuário do dispositivo, não sendo necessário o uso de identificação do desenvolvedor. Antes de iniciar a leitura, recomendamos que faça a leitura do post sobre a [autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html), porque esta postagem mostrará exemplos que necessitam que o dispositivo esteja conectado e autenticado.
 
-Para cadastrar um dispositivo no SaIoT é preciso fazer uma descrição das características do dispositivo seguindo a [padronização suportada](/blog/2018/08/20/padronizacao-comunicacao.html) pela plataforma.
+Para cadastrar um dispositivo no Saiot é preciso fazer uma descrição das características do dispositivo seguindo a [padronização suportada](/blog/2018/08/20/padronizacao-comunicacao.html) pela plataforma.
 
 ## Descrevendo um dispositivo
 
 A padronização diz que todo dispositivo pode ser descrito por um conjunto de controladores e sensores. Cada um deles deve ter um identificador único (**_key_**) pra aquele dispositivo. Além disso, o próprio dispositivo deve ter um identificador único (**serial**) entre todos os dispositivos existentes.
 
-A seguir tem um exemplo simples de descrição de um medidor inteligente que envia a quantidade de água consumida naquele intervalo para o SaIoT.
+A seguir tem um exemplo simples de descrição de um medidor inteligente que envia a quantidade de água consumida naquele intervalo para o Saiot.
 
 <script src="https://gist.github.com/judsonc/bfba690ccdea36a703628eed3e5158b0.js"></script>
 
@@ -67,4 +67,4 @@ Agora será mostrado um exemplo de dispositivo com controladores e sensores. Ess
 
 <hr>
 
-Assim finalizamos a primeira parte sobre o cadastro de dispositivo. Na próxima parte iremos falar sobre o envio da configuração de dispositivo para o SaIoT, permitindo assim realizar o [cadastro do dispositivo](/blog/2018/09/16/cadastro-dispositivo-parte-2.html).
+Assim finalizamos a primeira parte sobre o cadastro de dispositivo. Na próxima parte iremos falar sobre o envio da configuração de dispositivo para o Saiot, permitindo assim realizar o [cadastro do dispositivo](/blog/2018/09/16/cadastro-dispositivo-parte-2.html).
