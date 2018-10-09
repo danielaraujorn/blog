@@ -16,7 +16,7 @@
       <h1>{{ page.title }}</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i class="iconfont icon-author"></i>{%
-            if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}
+          if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}
         </span>
         <time class="post-meta-item" datetime="{{ page.date | date:" %y-%m-%d " }}"><i class="iconfont icon-date"></i>{{
           page.date | date_to_string }}</time>
@@ -122,7 +122,7 @@
 
   {% include footer.html %}
 
-  <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
   <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -135,13 +135,13 @@
   <script>
     socialShare('.social-share', {
       sites: [
-        {% for i in site.social-share-items %}
+        {% for i in site.social - share - items %}
           '{{ i }}'
           {% if forloop.last == false %},
-          {% endif %}
-        {% endfor %}
+    {% endif %}
+    {% endfor %}
       ],
-      wechatQrcodeTitle: document.title,
+    wechatQrcodeTitle: document.title,
       wechatQrcodeHelper: '<p>' + location.href + '</p>'
     });
   </script> {% if site.comments.disqus %}
