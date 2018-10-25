@@ -18,6 +18,8 @@ Para um dispositivo autenticar-se ao Saiot é necessário que ele esteja vincula
 
 A seguir será mostrado o fluxo dos dados desde que um dispositivo é ligado e conectado à internet até o momento que a conexão é autenticada. Isso sendo feito para os protocolos HTTP(S), [MQTT](https://www.ibm.com/developerworks/br/library/iot-mqtt-why-good-for-iot/index.html) e [_WebSocket_](https://developer.mozilla.org/pt-BR/docs/WebSockets).
 
+![Fluxo da autenticação de dispositivos](/blog/assets/post/autenticacao-dispositivo/autenticacao-fluxo.png)
+
 Inicialmente, é obrigatório utilizar o protocolo [HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP) ou [HTTPS](https://pt.wikipedia.org/wiki/Hyper_Text_Transfer_Protocol_Secure) (recomendado) mesmo que o dispositivo utilize outro protocolo suportado, como MQTT ou WebSocket. Todas as requisições devem ter no cabeçalho o `Content-Type: application/json`.
 
 Caso utilize o protocolo HTTP ou a biblioteca HTTPS utilizada não precise do _fingerprint_, avance para o tópico [Token de acesso](#token-de-acesso).
@@ -40,7 +42,7 @@ O primeiro passo da autenticação é requisitar um token de acesso que represen
 
 **Protocolo:** `HTTP / HTTPS`
 
-**URL:** 
+**URL:**
 
 `POST api.saiot.ect.ufrn.br/v1/device/auth/login`
 
