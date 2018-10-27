@@ -59,7 +59,7 @@ A seguir será apresentado exemplos de envio com todos os protocolos suportados 
   "token": "token da autenticação",
   "data": [
     {
-      "dados": [
+      "data": [
         {
           "serial": "device1",
           "sensor1": 4,
