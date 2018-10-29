@@ -36,7 +36,7 @@ Em seguida vamos cadastrar um local chamado **Quarto** pertencente ao local **Ca
 
 ### Excluindo um local
 
-No gerenciamento também é possível apagar um local. Quando isso é feito, todos os dispositivos que estão vinculados ao local ficarão visíveis para os usuários que os cadastraram no sistema. Assim, o usuário que cadastrou o dispositivo poderá vinculá-lo novamente a um novo local.
+No gerenciamento também é possível apagar um local. Quando isso é feito, todos os dispositivos que estão vinculados ao local ficarão visíveis para os usuários que os cadastraram incialmente ao sistema. Assim, o usuário que cadastrou o dispositivo poderá vinculá-lo novamente a um novo local.
 
 <hr>
 

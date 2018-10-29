@@ -17,7 +17,7 @@ Primeiramente é preciso que você se registre no [Saiot](https://saiot.ect.ufrn
 ![Tela de registrar conta]({{site.baseurl}}/assets/post/gerenciamento-dispositivos/registro.png)
 
 ### Cadastrando um dispositivo
- 
+
 Após criar uma conta, é preciso [cadastrar um local]({{site.baseurl}}/2018/09/10/gerenciamento-locais). Ao ligar o dispositivo, será necessário configurar o acesso ao _Wi-Fi_ (Configure WiFi) conectando à rede criada pelo próprio dispositivo.
 
 ![tela do dispositivo no modo ap]({{site.baseurl}}/assets/post/gerenciamento-dispositivos/modoap.png)
@@ -39,5 +39,3 @@ Finalizado o cadastro do dispositivo, pode-se gerenciá-lo na tela de cadastro d
 ![tela de cadastro do dispositivo]({{site.baseurl}}/assets/post/gerenciamento-dispositivos/cadastro.png)
 
 Como mostrado na imagem acima, todos os dispositivos cadastrados no local selecionado ficam acessíveis para gerenciamento, como edição de suas informações ou exclusão do sistema.
-
-<!-- colocar link e falar do post que explica o JSON de cadastro pra desenvolvedor -->

@@ -23,13 +23,17 @@ Além da autenticação, os valores reportados devem ter o mesmo tipo (`type`) d
 
 E também é obrigatório o envio da data no formato `ano-mes-dia hr:mm:ss.ms` para dizer o horário que o dado foi captado pelo dispositivo. O Saiot tem um endereço que fornece a data-hora no formato definido.
 
-**Protocolo:** `HTTP / HTTPS`
+**Protocolo:**
+
+`HTTP / HTTPS`
 
 **URL:**
 
 `GET api.saiot.ect.ufrn.br/v1/device/history/datetime`
 
-**Resposta:** `2018-09-19 12:41:52.220`
+**Resposta:**
+
+`2018-09-19 12:41:52.220`
 
 ## Como utilizar
 
@@ -42,13 +46,15 @@ Para enviar dados para a plataforma, o dispositivo pode utilizar um dos três pr
 
 A seguir será apresentado exemplos de envio com todos os protocolos suportados pelo Saiot e com as duas formatações de envio válidas.
 
-**Todas as requisições feitas por dispositivos devem enviar juntamente o *token* de acesso, como informado na [Autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html).**
+**Todas as requisições feitas por dispositivos devem enviar juntamente o _token_ de acesso, como informado na [Autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html).**
 
 ### Formato 1
 
-**Protocolo:** `HTTP / HTTPS`
+**Protocolo:**
 
-**URL:** 
+`HTTP / HTTPS`
+
+**URL:**
 
 `POST api.saiot.ect.ufrn.br/v1/device/history/logs`
 
@@ -76,17 +82,25 @@ A seguir será apresentado exemplos de envio com todos os protocolos suportados 
 }
 ```
 
-**Resposta:** `200 OK`
+**Resposta:**
 
-**Protocolo:** `MQTT / WebSocket`
+`200 OK`
 
-**Tópico/Evento:** `/history/post/logs/`
+**Protocolo:**
+
+`MQTT / WebSocket`
+
+**Tópico/Evento:**
+
+`/history/post/logs/`
 
 **Corpo:** Mesma mensagem enviada no protocolo HTTP(S)
 
 ### Formato 2
 
-**Protocolo:** `HTTP / HTTPS`
+**Protocolo:**
+
+`HTTP / HTTPS`
 
 **URL:**
 
@@ -106,13 +120,21 @@ A seguir será apresentado exemplos de envio com todos os protocolos suportados 
 }
 ```
 
-**Resposta:** `200 OK`
+**Resposta:**
 
-**Protocolo:** `MQTT / WebSocket`
+`200 OK`
 
-**Tópico/Evento:** `/history/post/logs/sensor/`
+**Protocolo:**
 
-**Corpo:** Mesma mensagem enviada no protocolo HTTP(S)
+`MQTT / WebSocket`
+
+**Tópico/Evento:**
+
+`/history/post/logs/sensor/`
+
+**Corpo:**
+
+_Mesma mensagem enviada no protocolo HTTP(S)_
 
 Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, são eles: `number`, `string`, `point`, `boolean`. Abaixo será mostrado como esses tipos de valores (`value`) podem ser enviados.
 
@@ -162,7 +184,6 @@ Atualmente o sistema suporta quatro tipos de valores que podem ser armazenados, 
     "alt": 629.055643
   }
 }
-
 ```
 
 <hr>

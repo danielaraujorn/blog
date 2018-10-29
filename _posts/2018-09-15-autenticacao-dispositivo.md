@@ -26,11 +26,17 @@ Caso utilize o protocolo HTTP ou a biblioteca HTTPS utilizada não precise do _f
 
 Ao utilizar HTTPS, pode ser que o dispositivo necessite do [_fingerprint_](https://www.grc.com/fingerprints.htm) para fazer a requisição, então é possível ter acesso ao código _fingerprint_ ao fazer a seguinte requisição.
 
-**Protocolo:** `HTTP`
+**Protocolo:**
 
-**URL:** `GET auth.saiot.ect.ufrn.br/finger`
+`HTTP`
 
-**Resposta:** `23 4A C5 3B BD 8F D6 59 D0 11 BC 00 6F 0E 38 14 33 08 55 20`
+**URL:**
+
+`GET auth.saiot.ect.ufrn.br/finger`
+
+**Resposta:**
+
+`23 4A C5 3B BD 8F D6 59 D0 11 BC 00 6F 0E 38 14 33 08 55 20`
 
 Com o código em mãos, é possível fazer requisições HTTPS para o Saiot. Para exemplificar será feito uma requisição GET utilizando a biblioteca [ESP8266HTTPClient](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient).
 
@@ -40,7 +46,9 @@ Com o código em mãos, é possível fazer requisições HTTPS para o Saiot. Par
 
 O primeiro passo da autenticação é requisitar um token de acesso que representa o vínculo de uma conta existente de usuário com o serial de um dispositivo. Para isso, é preciso fazer a requisição a seguir.
 
-**Protocolo:** `HTTP / HTTPS`
+**Protocolo:**
+
+`HTTP / HTTPS`
 
 **URL:**
 
@@ -56,7 +64,9 @@ O primeiro passo da autenticação é requisitar um token de acesso que represen
 }
 ```
 
-**Resposta:** `cc1NUYhCHoB9bmrXvFk1`
+**Resposta:**
+
+`cc1NUYhCHoB9bmrXvFk1`
 
 ### Utilizando o Token
 
@@ -77,15 +87,23 @@ Esse padrão é obrigatório para todos os protocolos suportados pela aplicaçã
 
 Ao utilizar **_WebSocket_**, quando um dispositivo é conectado, a verificação do token ocorre quando é enviado alguma informação para a aplicação. Se o token estiver inválido, o dispositivo é desconectado.
 
-**Protocolo:** `WebSocket`
+**Protocolo:**
 
-**URL:** `ws.api.saiot.ect.ufrn.br`
+`WebSocket`
+
+**URL:**
+
+`ws.api.saiot.ect.ufrn.br`
 
 Quando um dispositivo utiliza o **MQTT**, há um passo a mais que deve ser feito na conexão com o Saiot. O MQTT tem um recurso de autenticação intrínseco ao protocolo que permite enviar credenciais de acesso assim que é feita a conexão com a plataforma. Para isso, é preciso enviar os seguintes dados:
 
-**Protocolo:** `MQTT`
+**Protocolo:**
 
-**URL:** `api.saiot.ect.ufrn.br:8000`
+`MQTT`
+
+**URL:**
+
+`api.saiot.ect.ufrn.br:8000`
 
 **Corpo:**
 

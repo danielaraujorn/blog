@@ -20,7 +20,7 @@ Para registrar uma conta de usuário é preciso fazer uma requisição ao seguin
 
 **Protocolo:** `HTTP / HTTPS`
 
-**URL:** 
+**URL:**
 
 `POST api.saiot.ect.ufrn.br/v1/client/auth/register`
 
@@ -44,9 +44,9 @@ Para registrar uma conta de usuário é preciso fazer uma requisição ao seguin
 
 Mais detalhes sobre os parâmetros de envio:
 
-* email*: permitido qualquer valor do tipo `string` com formato de email;
-* password*: permitido qualquer valor do tipo `string`, no mínimo 10 caracteres;
-* fullName*: permitido qualquer valor do tipo `string`, no mínimo 2 caracteres;
+- email\*: permitido qualquer valor do tipo `string` com formato de email;
+- password\*: permitido qualquer valor do tipo `string`, no mínimo 10 caracteres;
+- fullName\*: permitido qualquer valor do tipo `string`, no mínimo 2 caracteres;
 
 <span style="font-size:14px">\* parâmetro obrigatório.</span>
 
@@ -54,9 +54,11 @@ Mais detalhes sobre os parâmetros de envio:
 
 A rota a seguir realiza o login de uma conta de usuário.
 
-**Protocolo:** `HTTP / HTTPS`
+**Protocolo:**
 
-**URL:** 
+`HTTP / HTTPS`
+
+**URL:**
 
 `POST api.saiot.ect.ufrn.br/v1/client/auth/login`
 
@@ -79,18 +81,20 @@ A rota a seguir realiza o login de uma conta de usuário.
 
 Mais detalhes sobre os parâmetros de envio:
 
-* email*: permitido qualquer valor do tipo `string` com formato de email;
-* password*: permitido qualquer valor do tipo `string`, no mínimo 10 caracteres;
+- email\*: permitido qualquer valor do tipo `string` com formato de email;
+- password\*: permitido qualquer valor do tipo `string`, no mínimo 10 caracteres;
 
-Quando um usuário faz o login na interface, o Saiot registra um cookie de sessão no cabelhaço da conexão. Com isso, é possível que a aplicação tenha acesso a rotas restritas, ou seja, que necessitam de um usuário autenticado. 
+Quando um usuário faz o login na interface, o Saiot registra um cookie de sessão no cabelhaço da conexão. Com isso, é possível que a aplicação tenha acesso a rotas restritas, ou seja, que necessitam de um usuário autenticado.
 
 ### Logout de usuário
 
 A rota a seguir encerra a sessão de uma conta de usuário.
 
-**Protocolo:** `HTTP / HTTPS`
+**Protocolo:**
 
-**URL:** 
+`HTTP / HTTPS`
+
+**URL:**
 
 `POST api.saiot.ect.ufrn.br/v1/client/auth/logout`
 
@@ -104,8 +108,8 @@ A rota a seguir encerra a sessão de uma conta de usuário.
 
 ## WebSocket
 
-Para usar o *WebSocket* é preciso que um usuário tenha se logado no sistema para permitir checar se existe um *cookie* de sessão. Caso não exista um *cookie* de sessão no cabelhaço da conexão, não é possível conectar-se à aplicação. 
+Para usar o _WebSocket_ é preciso que um usuário tenha se logado no sistema para permitir checar se existe um _cookie_ de sessão. Caso não exista um _cookie_ de sessão no cabelhaço da conexão, não é possível conectar-se à aplicação.
 
-Quando a sessão de usuário expira, a conexão *WebSocket* é desconectada. Para reconectar é preciso fazer o processo de login de usuários novamente.
+Quando a sessão de usuário expira, a conexão _WebSocket_ é desconectada. Para reconectar é preciso fazer o processo de login de usuários novamente.
 
 Toda a aplicação Saiot é feita utilizando o módulo [Socket.io](https://socket.io/) que também tem uma biblioteca para interfaces.

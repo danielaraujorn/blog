@@ -16,15 +16,17 @@ Antes de fazer o cadastro de um dispositivo, é necessário fazer a sua descriç
 
 Ao enviar a configuração de um dispositivo, o Saiot verifica se o serial de identificação já está ativado no sistema. Caso esteja em uso, é retornado a configuração salva, se não estiver, é retornado que o dispositivo está cadastrado como pendente (`device pending`). A resposta da requisição varia de acordo com o protocolo utilizado pelo dispositivo.
 
-**Todas as requisições feitas por dispositivos devem enviar juntamente o *token* de acesso, como informado na [Autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html).**
+**Todas as requisições feitas por dispositivos devem enviar juntamente o _token_ de acesso, como informado na [Autenticação de dispositivos](/blog/2018/09/15/autenticacao-dispositivo.html).**
 
 ## HTTP(S)
 
-Após fazer a descrição de um dispositivo, faça uma requisição [POST](https://pt.wikipedia.org/wiki/POST_(HTTP)) enviando a configuração para o Saiot para efetuar o cadastro.
+Após fazer a descrição de um dispositivo, faça uma requisição [POST](<https://pt.wikipedia.org/wiki/POST_(HTTP)>) enviando a configuração para o Saiot para efetuar o cadastro.
 
-**Protocolo:** `HTTP / HTTPS`
+**Protocolo:**
 
-**URL:** 
+`HTTP / HTTPS`
+
+**URL:**
 
 `POST api.saiot.ect.ufrn.br/v1/device/manager/device`
 
@@ -38,9 +40,13 @@ Após fazer a descrição de um dispositivo, faça uma requisição [POST](https
 
 Com o dispositivo conectado utilizando **MQTT** ele deve se inscrever (_subscribe_) no tópico com o mesmo nome do serial de identificação para receber as respostas das publicações (_publish_). Se o dispositivo utilizar o **_WebSocket_**, as respostas das requisições (_emit_) serão recebidas no evento (_on_) com o mesmo nome do serial.
 
-**Protocolo:** `MQTT / WebSocket`
+**Protocolo:**
 
-**Tópico/Evento:** `/manager/post/device/`
+`MQTT / WebSocket`
+
+**Tópico/Evento:**
+
+`/manager/post/device/`
 
 **Corpo:** Mesma mensagem enviada no protocolo HTTP(S)
 
