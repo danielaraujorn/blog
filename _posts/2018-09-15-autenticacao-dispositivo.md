@@ -20,11 +20,11 @@ A seguir será mostrado o fluxo dos dados desde que um dispositivo é ligado e c
 
 ![Fluxo da autenticação de dispositivos](/blog/assets/post/autenticacao-dispositivo/autenticacao-fluxo.png)
 
-Inicialmente, é obrigatório utilizar o protocolo [HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP) ou [HTTPS](https://pt.wikipedia.org/wiki/Hyper_Text_Transfer_Protocol_Secure) (recomendado) mesmo que o dispositivo utilize outro protocolo suportado, como MQTT ou WebSocket. Todas as requisições devem ter no cabeçalho o `Content-Type: application/json`.
+Inicialmente, é obrigatório utilizar o protocolo [HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP) ou [HTTPS](https://pt.wikipedia.org/wiki/Hyper_Text_Transfer_Protocol_Secure) (recomendado) mesmo que o dispositivo utilize outro protocolo suportado, como MQTT ou WebSocket. Todas as requisições HTTP e HTTPS devem ter no cabeçalho o _header_ `Content-Type` com o valor `application/json`.
 
-Caso utilize o protocolo HTTP ou a biblioteca HTTPS utilizada não precise do _fingerprint_, avance para o tópico [Token de acesso](#token-de-acesso).
+Caso use o protocolo HTTP ou uma biblioteca HTTPS que não precise do [_fingerprint_](https://www.grc.com/fingerprints.htm), avance para o tópico [Token de acesso](#token-de-acesso).
 
-Ao utilizar HTTPS, pode ser que o dispositivo necessite do [_fingerprint_](https://www.grc.com/fingerprints.htm) para fazer a requisição, então é possível ter acesso ao código _fingerprint_ ao fazer a seguinte requisição.
+Se for preciso ter o código _fingerprint_ para utilizar o protocolo HTTPS, faça a seguinte requisição.
 
 **Protocolo:**
 
@@ -38,7 +38,9 @@ Ao utilizar HTTPS, pode ser que o dispositivo necessite do [_fingerprint_](https
 
 `23 4A C5 3B BD 8F D6 59 D0 11 BC 00 6F 0E 38 14 33 08 55 20`
 
-Com o código em mãos, é possível fazer requisições HTTPS para o Saiot. Para exemplificar será feito uma requisição GET utilizando a biblioteca [ESP8266HTTPClient](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient).
+Com o _fingerprint_ em mãos, é possível fazer requisições HTTPS para o Saiot.
+
+Para exemplificar será feito uma requisição GET utilizando a biblioteca [ESP8266HTTPClient](https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient).
 
 <script src="https://gist.github.com/judsonc/3a80e074bb361a270c6e51a3af51a6ac.js"></script>
 
@@ -114,4 +116,8 @@ Quando um dispositivo utiliza o **MQTT**, há um passo a mais que deve ser feito
 }
 ```
 
-O dispositivo não conseguirá se conectar caso o token de acesso seja inválido, tendo em vista que tanto o token de acesso quanto o serial do dispositivo devem ser únicos.
+O dispositivo não conseguirá se conectar caso o token de acesso seja inválido, tendo em vista que tanto o token de acesso quanto o serial do dispositivo devem ser únicos. Cada token criado só é válido para o serial que foi utilizado.
+
+<hr>
+
+Assim é concluído o processo de autenticação de dispositivos para conectar-se a plataforma Saiot, onde inicialmente é preciso criar um token de acesso a partir do envio das credenciais de um usuário cadastrado e um serial de um dispositivo que se queira cadastrar e, em seguida, utilizar o token para enviar os dados desse dispositivo. Os dados a serem enviados são explicados nas postagens [Cadastro de dispositivos - Parte 1](/blog/2018/09/16/cadastro-dispositivo-parte-1.html) e [Cadastro de dispositivos - Parte 2](/blog/2018/09/16/cadastro-dispositivo-parte-2.html).
