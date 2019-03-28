@@ -18,7 +18,7 @@ Primeiramente é preciso que você se registre no [Saiot](https://saiot.ect.ufrn
 
 ### Cadastrando um dispositivo
 
-Após criar uma conta, é preciso [cadastrar um local]({{site.baseurl}}/2018/09/10/gerenciamento-locais). Ao ligar o dispositivo, será necessário configurar o acesso ao _Wi-Fi_ (Configure WiFi) conectando à rede criada pelo próprio dispositivo.
+Após criar uma conta, é preciso [cadastrar um local]({{site.baseurl}}/2018/09/10/gerenciamento-locais.html). Ao ligar o dispositivo, será necessário configurar o acesso ao _Wi-Fi_ (Configure WiFi) conectando à rede criada pelo próprio dispositivo.
 
 ![tela do dispositivo no modo ap]({{site.baseurl}}/assets/post/gerenciamento-dispositivos/modoap.png)
 
